@@ -2,6 +2,10 @@
 
 ## Project status: Proof-of-Concept (PoC) success
 ## !!! THIS IS JUST A PoC !!! Use the provided material and documentation at your own risk!
+Known problems:
+* The two SATA connectors are a little too close together. While two disks still barely fit, there should be more space in future version.
+
+# General Overview
 Welcome to the Git repository of a Raspberry Pi (Compute Module) based networking educational board. Its core features include:
 * Three 10/100 Ethernet ports
 * A total of 7 USB 2.0 ports:
@@ -25,24 +29,24 @@ Although all peripherals share a single USB2.0 bus and will hence be "slow" to s
 The purpose of these boards is to provide a self-contained lab environment rather than being small servers. However, in environments where 
 speed is not of primary concern, such a system (or systems) could still make a valuable contribution. 
 
-### Fully Open Source / Open Hardware
+## Fully Open Source / Open Hardware
 Everything in this repository is Copyright 2020, Peter Heinrich, ZHAW but is licensed under permissive open source / open hardware licenses.
 * License for hardware design documentes (SEE LICENSE_Hardware file): <strong>CERN Open Hardware Licence Version 2 - Permissive</strong>
 * License for firmware (SEE LICENSE_Software file): <strong>2-Clause BSD License</strong> 
 
-### Prototype REV-B
+# Prototype REV-B
 SUCCESSS! The REV-B prototype is fully operational. Network, display with touch, SATA and all the USB ports are working properly.
 ![alt text](https://github.com/peterheinrich/ZHAW_DFF_RPI_Network_Lab_Board/blob/master/doc/REV-B-4DPI_HAT.jpeg "Final System With HAT")
 ![alt text](https://github.com/peterheinrich/ZHAW_DFF_RPI_Network_Lab_Board/blob/master/doc/REV-B-TOP.jpeg "TOP")
 ![alt text](https://github.com/peterheinrich/ZHAW_DFF_RPI_Network_Lab_Board/blob/master/doc/REV-B-BOTTOM.jpeg "BOTTOM")
 
-#### System Architecture
+### System Architecture
 ![alt text](https://github.com/peterheinrich/ZHAW_DFF_RPI_Network_Lab_Board/blob/master/doc/Architecture.png "Architecture Overview")
-#### Initial PCB Artwork
+### Initial PCB Artwork
 ![alt text](https://github.com/peterheinrich/ZHAW_DFF_RPI_Network_Lab_Board/blob/master/doc/Rendered_Top.png "PCB Artwork TOP")
 ![alt text](https://github.com/peterheinrich/ZHAW_DFF_RPI_Network_Lab_Board/blob/master/doc/Rendered_Bottom.png "PCB Artwork BOTTOM")
 
-### Prototype REV-A
+## Prototype REV-A
 The project successfully surpassed the revision A proof-of-concept. While its documentation is not included in the repository anymore,
 here are some images documenting this project phase:
 
@@ -53,9 +57,9 @@ Some debugging of network and SATA ...
 First time successful SATA disk access after finding out that the TI SATA controller only works with some SPI flash chips (i.e. the ones that allow 128 byte page writes with command 0x02).
 ![alt text](https://github.com/peterheinrich/ZHAW_DFF_RPI_Network_Lab_Board/blob/master/doc/REV-A-SATA.jpg "REV-A board SATA")
 
-## Scenarios
+# Scenarios
 Currently scenarios are developed and will be supplied here later. The initial demonstration scenarios will include:
-### Raid Lab
+## Raid Lab
 With a single board, students will explore the setup of different raid levels and their behavior under different fault conditions. 
 Experiments could cover:
   * Different RAID levels (0/1/5) or even RAID 10 using an additional USB port.
@@ -63,7 +67,7 @@ Experiments could cover:
   * LVM/LUKS setups
   * System behaviour when disks fail
 
-### HA-Lab
+## HA-Lab
 Using three boards, students explore basic high availability concepts.
 Experiments could cover:
   * DRBD disk synchronization and cluster file systems
@@ -71,7 +75,7 @@ Experiments could cover:
   * MySQL active/active replication
   * Round robin DNS load balancing
   
-### MitM-Lab (Man-in-the-Middle)
+## MitM-Lab (Man-in-the-Middle)
 Using three boards students can simulate a two-party communication and an attacker that can eavesdrop / alter the communication.
 Experiments could include:
   * ARP spoofing
