@@ -83,7 +83,7 @@ Experiments could include:
   * SSL encryption
   * Mitigation concepts (such as certificate pinning)
 
-### Firewall/IDS-Lab
+## Firewall/IDS-Lab
 Using three boards, a typical small firewall setup with an internal and a DMZ zone can be modeled. Students will explore basic
 iptables / nftables filtering (IPv4/IPv6), nat (IPv4) setups.
 
