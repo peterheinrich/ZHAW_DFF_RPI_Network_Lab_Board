@@ -1,0 +1,300 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 19
+Title "Raspberry Pi Network Lab Board"
+Date "2020-11-04"
+Rev "B"
+Comp "ZHAW School of Management and Law"
+Comment1 "Funded by ZHAW digital"
+Comment2 "http://cern.ch/cern-ohl"
+Comment3 "Licensed under CERN-OHL-P V. 2.0"
+Comment4 "(c) Copyright 2020 Peter Heinrich, ZHAW"
+$EndDescr
+Text HLabel 3550 3650 0    50   BiDi ~ 0
+SD0_CLK
+Text HLabel 3550 3450 0    50   BiDi ~ 0
+SD0_CMD
+Text HLabel 3550 3850 0    50   BiDi ~ 0
+SD0_D0
+Text HLabel 3550 3950 0    50   BiDi ~ 0
+SD0_D1
+Text HLabel 3550 3250 0    50   BiDi ~ 0
+SD0_D2
+Text HLabel 3550 3350 0    50   BiDi ~ 0
+SD0_D3
+$Comp
+L Connector:Micro_SD_Card J2
+U 1 1 5EFB4781
+P 6650 3550
+F 0 "J2" H 6600 4267 50  0000 C CNN
+F 1 "Conn_Micro_SD_Card" H 6600 4176 50  0000 C CNN
+F 2 "693071010811:693071010811" H 7800 3850 50  0001 C CNN
+F 3 "http://katalog.we-online.de/datasheet/693071010811.pdf" H 6650 3550 50  0001 C CNN
+F 4 "693071010811" H 6650 3550 50  0001 C CNN "MPN"
+F 5 "2081363" H 6650 3550 50  0001 C CNN "ON_FARNELL"
+	1    6650 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3250 3850 3250
+Wire Wire Line
+	5750 3350 4200 3350
+Wire Wire Line
+	5750 3450 4500 3450
+Wire Wire Line
+	5750 3650 3550 3650
+Wire Wire Line
+	5750 3850 4800 3850
+Wire Wire Line
+	5750 3950 5100 3950
+$Comp
+L Device:C C?
+U 1 1 5EFB7A20
+P 2400 3650
+AR Path="/5E8C8987/5EFB7A20" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5EFB7A20" Ref="C?"  Part="1" 
+AR Path="/5E8C8683/5EFB7A20" Ref="C28"  Part="1" 
+F 0 "C28" H 2515 3696 50  0000 L CNN
+F 1 "100n" H 2515 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2438 3500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 2400 3650 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 2400 3650 50  0001 C CNN "MPN"
+F 5 "2581045" H 2400 3650 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 2400 3650 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 2400 3650 50  0001 C CNN "ATTRIBUTE"
+	1    2400 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3750 2850 3750
+Wire Wire Line
+	2850 3750 2850 3900
+Wire Wire Line
+	2850 3900 2400 3900
+Wire Wire Line
+	2400 3900 2400 3800
+Wire Wire Line
+	5750 3550 2850 3550
+Wire Wire Line
+	2850 3550 2850 3400
+Wire Wire Line
+	2850 3400 2400 3400
+Wire Wire Line
+	2400 3400 2400 3500
+$Comp
+L power:+3V3 #PWR024
+U 1 1 5EFB8877
+P 2400 3300
+F 0 "#PWR024" H 2400 3150 50  0001 C CNN
+F 1 "+3V3" H 2415 3473 50  0000 C CNN
+F 2 "" H 2400 3300 50  0001 C CNN
+F 3 "" H 2400 3300 50  0001 C CNN
+	1    2400 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR025
+U 1 1 5EFB8E06
+P 2400 4000
+F 0 "#PWR025" H 2400 3750 50  0001 C CNN
+F 1 "GND" H 2405 3827 50  0000 C CNN
+F 2 "" H 2400 4000 50  0001 C CNN
+F 3 "" H 2400 4000 50  0001 C CNN
+	1    2400 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 3900 2400 4000
+Connection ~ 2400 3900
+Wire Wire Line
+	2400 3400 2400 3300
+Connection ~ 2400 3400
+Wire Wire Line
+	7550 4150 7450 4150
+$Comp
+L Device:R R?
+U 1 1 5EC5D51E
+P 3850 2900
+AR Path="/5E8C8845/5EC5D51E" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5EC5D51E" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5EC5D51E" Ref="R?"  Part="1" 
+AR Path="/5E8C8683/5EC5D51E" Ref="R10"  Part="1" 
+F 0 "R10" H 3920 2946 50  0000 L CNN
+F 1 "10K" H 3920 2855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3780 2900 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 3850 2900 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 3850 2900 50  0001 C CNN "MPN"
+F 5 "1469748" H 3850 2900 50  0001 C CNN "ON_FARNELL"
+	1    3850 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EC5F695
+P 4200 2900
+AR Path="/5E8C8845/5EC5F695" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5EC5F695" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5EC5F695" Ref="R?"  Part="1" 
+AR Path="/5E8C8683/5EC5F695" Ref="R11"  Part="1" 
+F 0 "R11" H 4270 2946 50  0000 L CNN
+F 1 "10K" H 4270 2855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4130 2900 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 4200 2900 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 4200 2900 50  0001 C CNN "MPN"
+F 5 "1469748" H 4200 2900 50  0001 C CNN "ON_FARNELL"
+	1    4200 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EC5F95D
+P 4500 2900
+AR Path="/5E8C8845/5EC5F95D" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5EC5F95D" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5EC5F95D" Ref="R?"  Part="1" 
+AR Path="/5E8C8683/5EC5F95D" Ref="R12"  Part="1" 
+F 0 "R12" H 4570 2946 50  0000 L CNN
+F 1 "10K" H 4570 2855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4430 2900 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 4500 2900 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 4500 2900 50  0001 C CNN "MPN"
+F 5 "1469748" H 4500 2900 50  0001 C CNN "ON_FARNELL"
+	1    4500 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EC5FBE6
+P 4800 2900
+AR Path="/5E8C8845/5EC5FBE6" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5EC5FBE6" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5EC5FBE6" Ref="R?"  Part="1" 
+AR Path="/5E8C8683/5EC5FBE6" Ref="R13"  Part="1" 
+F 0 "R13" H 4870 2946 50  0000 L CNN
+F 1 "10K" H 4870 2855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 2900 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 4800 2900 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 4800 2900 50  0001 C CNN "MPN"
+F 5 "1469748" H 4800 2900 50  0001 C CNN "ON_FARNELL"
+	1    4800 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EC5FE31
+P 5100 2900
+AR Path="/5E8C8845/5EC5FE31" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5EC5FE31" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5EC5FE31" Ref="R?"  Part="1" 
+AR Path="/5E8C8683/5EC5FE31" Ref="R14"  Part="1" 
+F 0 "R14" H 5170 2946 50  0000 L CNN
+F 1 "10K" H 5170 2855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5030 2900 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 5100 2900 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 5100 2900 50  0001 C CNN "MPN"
+F 5 "1469748" H 5100 2900 50  0001 C CNN "ON_FARNELL"
+	1    5100 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3050 3850 3250
+Connection ~ 3850 3250
+Wire Wire Line
+	3850 3250 3550 3250
+Wire Wire Line
+	4200 3050 4200 3350
+Connection ~ 4200 3350
+Wire Wire Line
+	4200 3350 3550 3350
+Wire Wire Line
+	4500 3050 4500 3450
+Connection ~ 4500 3450
+Wire Wire Line
+	4500 3450 3550 3450
+Wire Wire Line
+	4800 3050 4800 3850
+Connection ~ 4800 3850
+Wire Wire Line
+	4800 3850 3550 3850
+Wire Wire Line
+	5100 3050 5100 3950
+Connection ~ 5100 3950
+Wire Wire Line
+	5100 3950 3550 3950
+$Comp
+L power:+3V3 #PWR023
+U 1 1 5EC6115A
+P 3850 2650
+F 0 "#PWR023" H 3850 2500 50  0001 C CNN
+F 1 "+3V3" H 3865 2823 50  0000 C CNN
+F 2 "" H 3850 2650 50  0001 C CNN
+F 3 "" H 3850 2650 50  0001 C CNN
+	1    3850 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 2650 3850 2700
+Wire Wire Line
+	3850 2700 4200 2700
+Wire Wire Line
+	4200 2700 4200 2750
+Connection ~ 3850 2700
+Wire Wire Line
+	3850 2700 3850 2750
+Wire Wire Line
+	4200 2700 4500 2700
+Wire Wire Line
+	4500 2700 4500 2750
+Connection ~ 4200 2700
+Wire Wire Line
+	4500 2700 4800 2700
+Wire Wire Line
+	4800 2700 4800 2750
+Connection ~ 4500 2700
+Wire Wire Line
+	4800 2700 5100 2700
+Wire Wire Line
+	5100 2700 5100 2750
+Connection ~ 4800 2700
+Text Notes 3900 3100 0    50   ~ 0
+N.P.
+Text Notes 4250 3100 0    50   ~ 0
+N.P.
+Text Notes 4550 3100 0    50   ~ 0
+N.P.
+Text Notes 4850 3100 0    50   ~ 0
+N.P.
+Text Notes 5150 3100 0    50   ~ 0
+N.P.
+$Comp
+L Graphic:Logo_Open_Hardware_Small #LOGO?
+U 1 1 5F5FB0ED
+P 10900 6900
+AR Path="/5F5FB0ED" Ref="#LOGO?"  Part="1" 
+AR Path="/5E8C8683/5F5FB0ED" Ref="#LOGO3"  Part="1" 
+F 0 "#LOGO3" H 10900 7175 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 10900 6675 50  0001 C CNN
+F 2 "" H 10900 6900 50  0001 C CNN
+F 3 "~" H 10900 6900 50  0001 C CNN
+	1    10900 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5F6B9C07
+P 7550 4300
+AR Path="/5E8C85D5/5F6B9C07" Ref="#PWR?"  Part="1" 
+AR Path="/5E8C8683/5F6B9C07" Ref="#PWR0237"  Part="1" 
+F 0 "#PWR0237" H 7550 4100 50  0001 C CNN
+F 1 "GNDPWR" H 7554 4146 50  0000 C CNN
+F 2 "" H 7550 4250 50  0001 C CNN
+F 3 "" H 7550 4250 50  0001 C CNN
+	1    7550 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 4300 7550 4150
+$EndSCHEMATC

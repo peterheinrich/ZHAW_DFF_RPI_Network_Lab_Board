@@ -1,0 +1,2089 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 14 19
+Title "Raspberry Pi Network Lab Board"
+Date "2020-11-04"
+Rev "B"
+Comp "ZHAW School of Management and Law"
+Comment1 "Funded by ZHAW digital"
+Comment2 "http://cern.ch/cern-ohl"
+Comment3 "Licensed under CERN-OHL-P V. 2.0"
+Comment4 "(c) Copyright 2020 Peter Heinrich, ZHAW"
+$EndDescr
+Wire Wire Line
+	1500 1200 1350 1200
+Wire Wire Line
+	1500 900  1350 900 
+$Comp
+L Device:R R?
+U 1 1 5F8C250F
+P 1650 1200
+AR Path="/5E8C857B/5F8C250F" Ref="R?"  Part="1" 
+AR Path="/5E8C89DB/5F8C250F" Ref="R?"  Part="1" 
+AR Path="/5E8C8BAF/5F8C250F" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C250F" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C250F" Ref="R119"  Part="1" 
+F 0 "R119" H 1720 1246 50  0000 L CNN
+F 1 "0R" H 1720 1155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1580 1200 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 1650 1200 50  0001 C CNN
+F 4 "CRCW06030000Z0EA" H 1650 1200 50  0001 C CNN "MPN"
+F 5 "1469739" H 1650 1200 50  0001 C CNN "ON_FARNELL"
+	1    1650 1200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F8C2516
+P 1650 900
+AR Path="/5E8C857B/5F8C2516" Ref="R?"  Part="1" 
+AR Path="/5E8C89DB/5F8C2516" Ref="R?"  Part="1" 
+AR Path="/5E8C8BAF/5F8C2516" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2516" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2516" Ref="R116"  Part="1" 
+F 0 "R116" H 1720 946 50  0000 L CNN
+F 1 "0R" H 1720 855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1580 900 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 1650 900 50  0001 C CNN
+F 4 "CRCW06030000Z0EA" H 1650 900 50  0001 C CNN "MPN"
+F 5 "1469739" H 1650 900 50  0001 C CNN "ON_FARNELL"
+	1    1650 900 
+	0    -1   -1   0   
+$EndComp
+Text HLabel 1350 1200 0    50   BiDi ~ 0
+PORTA_DM
+Text HLabel 1350 900  0    50   BiDi ~ 0
+PORTA_DP
+$Comp
+L TUSB9261IPVP:TUSB9261IPVP IC?
+U 1 1 5F8C251F
+P 3450 1000
+AR Path="/5E8C8B3B/5F8C251F" Ref="IC?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C251F" Ref="IC14"  Part="1" 
+F 0 "IC14" H 4250 1165 50  0000 C CNN
+F 1 "TUSB9261IPVP" H 4250 1074 50  0000 C CNN
+F 2 "TUSB9261IPVP:PQFP-64_7x7mm_P0.4mm" H 3450 1000 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tusb9261.pdf" H 3450 1000 50  0001 C CNN
+F 4 "TUSB9261IPVP" H 3450 1000 50  0001 C CNN "MPN"
+F 5 "3124773" H 3450 1000 50  0001 C CNN "ON_FARNELL"
+	1    3450 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal_GND24 Y?
+U 1 1 5F8C2526
+P 6200 1850
+AR Path="/5E8C8845/5F8C2526" Ref="Y?"  Part="1" 
+AR Path="/5F37F386/5F8C2526" Ref="Y?"  Part="1" 
+AR Path="/5F38055E/5F8C2526" Ref="Y?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2526" Ref="Y?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2526" Ref="Y5"  Part="1" 
+F 0 "Y5" V 6050 1950 50  0000 L CNN
+F 1 "40MHz" V 6350 1950 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm" H 6200 1850 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2792510.pdf" H 6200 1850 50  0001 C CNN
+F 4 "ABM8-40.000MHZ-10-D1G-T" V 6200 1850 50  0001 C CNN "MPN"
+F 5 "3228516" H 6200 1850 50  0001 C CNN "ON_FARNELL"
+	1    6200 1850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6200 2000 6200 2100
+Wire Wire Line
+	6200 2100 5600 2100
+Wire Wire Line
+	5050 1600 5600 1600
+Wire Wire Line
+	6200 1600 6200 1700
+$Comp
+L Device:R R?
+U 1 1 5F8C253D
+P 5600 1850
+AR Path="/5E8C8845/5F8C253D" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5F8C253D" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5F8C253D" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C253D" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C253D" Ref="R124"  Part="1" 
+F 0 "R124" H 5670 1896 50  0000 L CNN
+F 1 "1M" H 5670 1805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5530 1850 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 5600 1850 50  0001 C CNN
+F 4 "CRCW06031M00FKEA" H 5600 1850 50  0001 C CNN "MPN"
+F 5 "1469746" H 5600 1850 50  0001 C CNN "ON_FARNELL"
+	1    5600 1850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5600 1700 5600 1600
+Connection ~ 5600 1600
+Wire Wire Line
+	5600 1600 6200 1600
+Wire Wire Line
+	5600 2000 5600 2100
+Connection ~ 5600 2100
+Wire Wire Line
+	5600 2100 5050 2100
+$Comp
+L Device:C C?
+U 1 1 5F8C254A
+P 6750 1600
+AR Path="/5E8C8845/5F8C254A" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C254A" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C254A" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C254A" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C254A" Ref="C166"  Part="1" 
+F 0 "C166" V 6600 1600 50  0000 C CNN
+F 1 "33p" V 6900 1600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6788 1450 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C330J5GACTU.pdf" H 6750 1600 50  0001 C CNN
+F 4 "C0603C330J5GACTU" V 6750 1600 50  0001 C CNN "MPN"
+F 5 "1414633" H 6750 1600 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 6750 1600 50  0001 C CNN "LCSC_PART_NO"
+	1    6750 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6600 1600 6200 1600
+Connection ~ 6200 1600
+Wire Wire Line
+	6600 2100 6200 2100
+Connection ~ 6200 2100
+Wire Wire Line
+	6900 2100 7000 2100
+Wire Wire Line
+	7000 2100 7000 1850
+Connection ~ 7000 1850
+Wire Wire Line
+	7000 1850 6400 1850
+Wire Wire Line
+	7000 1850 7000 1600
+Wire Wire Line
+	7000 1600 6900 1600
+Text Notes 5800 2050 2    50   ~ 0
+N.P.
+$Comp
+L Device:C C?
+U 1 1 5F8C255D
+P 5650 3650
+AR Path="/5E8C8987/5F8C255D" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C255D" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C255D" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C255D" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C255D" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C255D" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C255D" Ref="C172"  Part="1" 
+F 0 "C172" H 5765 3696 50  0000 L CNN
+F 1 "100n" H 5765 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5688 3500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 5650 3650 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 5650 3650 50  0001 C CNN "MPN"
+F 5 "2581045" H 5650 3650 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 5650 3650 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 5650 3650 50  0001 C CNN "ATTRIBUTE"
+	1    5650 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2564
+P 6100 3650
+AR Path="/5E8C8987/5F8C2564" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2564" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2564" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2564" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2564" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2564" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2564" Ref="C173"  Part="1" 
+F 0 "C173" H 6215 3696 50  0000 L CNN
+F 1 "100n" H 6215 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6138 3500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 6100 3650 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 6100 3650 50  0001 C CNN "MPN"
+F 5 "2581045" H 6100 3650 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 6100 3650 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 6100 3650 50  0001 C CNN "ATTRIBUTE"
+	1    6100 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C256B
+P 6550 3650
+AR Path="/5E8C8987/5F8C256B" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C256B" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C256B" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C256B" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C256B" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C256B" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C256B" Ref="C174"  Part="1" 
+F 0 "C174" H 6665 3696 50  0000 L CNN
+F 1 "100n" H 6665 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6588 3500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 6550 3650 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 6550 3650 50  0001 C CNN "MPN"
+F 5 "2581045" H 6550 3650 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 6550 3650 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 6550 3650 50  0001 C CNN "ATTRIBUTE"
+	1    6550 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2572
+P 7000 3650
+AR Path="/5E8C8987/5F8C2572" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2572" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2572" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2572" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2572" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2572" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2572" Ref="C175"  Part="1" 
+F 0 "C175" H 7115 3696 50  0000 L CNN
+F 1 "100n" H 7115 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7038 3500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 7000 3650 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 7000 3650 50  0001 C CNN "MPN"
+F 5 "2581045" H 7000 3650 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 7000 3650 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 7000 3650 50  0001 C CNN "ATTRIBUTE"
+	1    7000 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2579
+P 7450 3650
+AR Path="/5E8C8987/5F8C2579" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2579" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2579" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2579" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2579" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2579" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2579" Ref="C176"  Part="1" 
+F 0 "C176" H 7565 3696 50  0000 L CNN
+F 1 "100n" H 7565 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7488 3500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 7450 3650 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 7450 3650 50  0001 C CNN "MPN"
+F 5 "2581045" H 7450 3650 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 7450 3650 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 7450 3650 50  0001 C CNN "ATTRIBUTE"
+	1    7450 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2580
+P 7900 3650
+AR Path="/5E8C8987/5F8C2580" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2580" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2580" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2580" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2580" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2580" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2580" Ref="C177"  Part="1" 
+F 0 "C177" H 8015 3696 50  0000 L CNN
+F 1 "100n" H 8015 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7938 3500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 7900 3650 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 7900 3650 50  0001 C CNN "MPN"
+F 5 "2581045" H 7900 3650 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 7900 3650 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 7900 3650 50  0001 C CNN "ATTRIBUTE"
+	1    7900 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2587
+P 8350 3650
+AR Path="/5E8C8987/5F8C2587" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2587" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2587" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2587" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2587" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2587" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2587" Ref="C178"  Part="1" 
+F 0 "C178" H 8465 3696 50  0000 L CNN
+F 1 "100n" H 8465 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8388 3500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 8350 3650 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 8350 3650 50  0001 C CNN "MPN"
+F 5 "2581045" H 8350 3650 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 8350 3650 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 8350 3650 50  0001 C CNN "ATTRIBUTE"
+	1    8350 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C258E
+P 8800 3650
+AR Path="/5E8C8987/5F8C258E" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C258E" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C258E" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C258E" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C258E" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C258E" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C258E" Ref="C179"  Part="1" 
+F 0 "C179" H 8915 3696 50  0000 L CNN
+F 1 "100n" H 8915 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8838 3500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 8800 3650 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 8800 3650 50  0001 C CNN "MPN"
+F 5 "2581045" H 8800 3650 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 8800 3650 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 8800 3650 50  0001 C CNN "ATTRIBUTE"
+	1    8800 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2595
+P 9250 3650
+AR Path="/5E8C8987/5F8C2595" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2595" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2595" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2595" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2595" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2595" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2595" Ref="C180"  Part="1" 
+F 0 "C180" H 9365 3696 50  0000 L CNN
+F 1 "100n" H 9365 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9288 3500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 9250 3650 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 9250 3650 50  0001 C CNN "MPN"
+F 5 "2581045" H 9250 3650 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 9250 3650 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 9250 3650 50  0001 C CNN "ATTRIBUTE"
+	1    9250 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C259C
+P 9700 3650
+AR Path="/5E8C8987/5F8C259C" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C259C" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C259C" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C259C" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C259C" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C259C" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C259C" Ref="C181"  Part="1" 
+F 0 "C181" H 9815 3696 50  0000 L CNN
+F 1 "100n" H 9815 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9738 3500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 9700 3650 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 9700 3650 50  0001 C CNN "MPN"
+F 5 "2581045" H 9700 3650 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 9700 3650 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 9700 3650 50  0001 C CNN "ATTRIBUTE"
+	1    9700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C25A3
+P 10150 3650
+AR Path="/5E8C8987/5F8C25A3" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C25A3" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C25A3" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C25A3" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C25A3" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C25A3" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C25A3" Ref="C182"  Part="1" 
+F 0 "C182" H 10265 3696 50  0000 L CNN
+F 1 "100n" H 10265 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10188 3500 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 10150 3650 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 10150 3650 50  0001 C CNN "MPN"
+F 5 "2581045" H 10150 3650 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 10150 3650 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 10150 3650 50  0001 C CNN "ATTRIBUTE"
+	1    10150 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 3400 10150 3500
+Wire Wire Line
+	9700 3500 9700 3400
+Connection ~ 9700 3400
+Wire Wire Line
+	9700 3400 10150 3400
+Wire Wire Line
+	9250 3500 9250 3400
+Connection ~ 9250 3400
+Wire Wire Line
+	9250 3400 9700 3400
+Wire Wire Line
+	8800 3500 8800 3400
+Wire Wire Line
+	5050 3400 5150 3400
+Connection ~ 8800 3400
+Wire Wire Line
+	8800 3400 9250 3400
+Wire Wire Line
+	8350 3500 8350 3400
+Connection ~ 8350 3400
+Wire Wire Line
+	8350 3400 8800 3400
+Wire Wire Line
+	7900 3500 7900 3400
+Connection ~ 7900 3400
+Wire Wire Line
+	7900 3400 8150 3400
+Wire Wire Line
+	7450 3500 7450 3400
+Connection ~ 7450 3400
+Wire Wire Line
+	7450 3400 7900 3400
+Wire Wire Line
+	7000 3500 7000 3400
+Connection ~ 7000 3400
+Wire Wire Line
+	7000 3400 7450 3400
+Wire Wire Line
+	6550 3500 6550 3400
+Connection ~ 6550 3400
+Wire Wire Line
+	6550 3400 7000 3400
+Wire Wire Line
+	6100 3500 6100 3400
+Connection ~ 6100 3400
+Wire Wire Line
+	6100 3400 6550 3400
+Wire Wire Line
+	5650 3500 5650 3400
+Connection ~ 5650 3400
+Wire Wire Line
+	5650 3400 6100 3400
+$Comp
+L power:GND #PWR?
+U 1 1 5F8C25C9
+P 8150 4000
+AR Path="/5E8C8845/5F8C25C9" Ref="#PWR?"  Part="1" 
+AR Path="/5F37F386/5F8C25C9" Ref="#PWR?"  Part="1" 
+AR Path="/5F38055E/5F8C25C9" Ref="#PWR?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C25C9" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C25C9" Ref="#PWR0182"  Part="1" 
+F 0 "#PWR0182" H 8150 3750 50  0001 C CNN
+F 1 "GND" V 8155 3872 50  0000 R CNN
+F 2 "" H 8150 4000 50  0001 C CNN
+F 3 "" H 8150 4000 50  0001 C CNN
+	1    8150 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3800 5650 3900
+Wire Wire Line
+	5650 3900 6100 3900
+Wire Wire Line
+	7900 3900 8150 3900
+Wire Wire Line
+	10150 3900 10150 3800
+Connection ~ 7900 3900
+Wire Wire Line
+	9700 3800 9700 3900
+Connection ~ 9700 3900
+Wire Wire Line
+	9700 3900 10150 3900
+Wire Wire Line
+	9250 3800 9250 3900
+Connection ~ 9250 3900
+Wire Wire Line
+	9250 3900 9700 3900
+Wire Wire Line
+	8800 3800 8800 3900
+Connection ~ 8800 3900
+Wire Wire Line
+	8800 3900 9250 3900
+Wire Wire Line
+	8350 3800 8350 3900
+Connection ~ 8350 3900
+Wire Wire Line
+	8350 3900 8800 3900
+Wire Wire Line
+	7900 3800 7900 3900
+Wire Wire Line
+	7450 3800 7450 3900
+Connection ~ 7450 3900
+Wire Wire Line
+	7450 3900 7900 3900
+Wire Wire Line
+	7000 3800 7000 3900
+Connection ~ 7000 3900
+Wire Wire Line
+	7000 3900 7450 3900
+Wire Wire Line
+	6550 3800 6550 3900
+Connection ~ 6550 3900
+Wire Wire Line
+	6550 3900 7000 3900
+Wire Wire Line
+	6100 3800 6100 3900
+Connection ~ 6100 3900
+Wire Wire Line
+	6100 3900 6550 3900
+Wire Wire Line
+	5150 3400 5150 3500
+Wire Wire Line
+	5150 4400 5050 4400
+Connection ~ 5150 3400
+Wire Wire Line
+	5150 3400 5650 3400
+Wire Wire Line
+	5050 4300 5150 4300
+Connection ~ 5150 4300
+Wire Wire Line
+	5150 4300 5150 4400
+Wire Wire Line
+	5050 4200 5150 4200
+Connection ~ 5150 4200
+Wire Wire Line
+	5150 4200 5150 4300
+Wire Wire Line
+	5050 4100 5150 4100
+Connection ~ 5150 4100
+Wire Wire Line
+	5150 4100 5150 4200
+Wire Wire Line
+	5050 4000 5150 4000
+Connection ~ 5150 4000
+Wire Wire Line
+	5150 4000 5150 4100
+Wire Wire Line
+	5050 3900 5150 3900
+Connection ~ 5150 3900
+Wire Wire Line
+	5150 3900 5150 4000
+Wire Wire Line
+	5050 3800 5150 3800
+Connection ~ 5150 3800
+Wire Wire Line
+	5150 3800 5150 3900
+Wire Wire Line
+	5050 3700 5150 3700
+Connection ~ 5150 3700
+Wire Wire Line
+	5150 3700 5150 3800
+Wire Wire Line
+	5050 3600 5150 3600
+Connection ~ 5150 3600
+Wire Wire Line
+	5150 3600 5150 3700
+Wire Wire Line
+	5050 3500 5150 3500
+Connection ~ 5150 3500
+Wire Wire Line
+	5150 3500 5150 3600
+$Comp
+L Device:C C?
+U 1 1 5F8C260D
+P 5650 4850
+AR Path="/5E8C8987/5F8C260D" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C260D" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C260D" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C260D" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C260D" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C260D" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C260D" Ref="C184"  Part="1" 
+F 0 "C184" H 5765 4896 50  0000 L CNN
+F 1 "100n" H 5765 4805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5688 4700 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 5650 4850 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 5650 4850 50  0001 C CNN "MPN"
+F 5 "2581045" H 5650 4850 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 5650 4850 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 5650 4850 50  0001 C CNN "ATTRIBUTE"
+	1    5650 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2614
+P 6100 4850
+AR Path="/5E8C8987/5F8C2614" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2614" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2614" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2614" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2614" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2614" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2614" Ref="C185"  Part="1" 
+F 0 "C185" H 6215 4896 50  0000 L CNN
+F 1 "100n" H 6215 4805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6138 4700 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 6100 4850 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 6100 4850 50  0001 C CNN "MPN"
+F 5 "2581045" H 6100 4850 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 6100 4850 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 6100 4850 50  0001 C CNN "ATTRIBUTE"
+	1    6100 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C261B
+P 6550 4850
+AR Path="/5E8C8987/5F8C261B" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C261B" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C261B" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C261B" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C261B" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C261B" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C261B" Ref="C186"  Part="1" 
+F 0 "C186" H 6665 4896 50  0000 L CNN
+F 1 "100n" H 6665 4805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6588 4700 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 6550 4850 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 6550 4850 50  0001 C CNN "MPN"
+F 5 "2581045" H 6550 4850 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 6550 4850 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 6550 4850 50  0001 C CNN "ATTRIBUTE"
+	1    6550 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2622
+P 5650 5750
+AR Path="/5E8C8987/5F8C2622" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2622" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2622" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2622" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2622" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2622" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2622" Ref="C188"  Part="1" 
+F 0 "C188" H 5765 5796 50  0000 L CNN
+F 1 "100n" H 5765 5705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5688 5600 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 5650 5750 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 5650 5750 50  0001 C CNN "MPN"
+F 5 "2581045" H 5650 5750 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 5650 5750 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 5650 5750 50  0001 C CNN "ATTRIBUTE"
+	1    5650 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2629
+P 6100 5750
+AR Path="/5E8C8987/5F8C2629" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2629" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2629" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2629" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2629" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2629" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2629" Ref="C189"  Part="1" 
+F 0 "C189" H 6215 5796 50  0000 L CNN
+F 1 "100n" H 6215 5705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6138 5600 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 6100 5750 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 6100 5750 50  0001 C CNN "MPN"
+F 5 "2581045" H 6100 5750 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 6100 5750 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 6100 5750 50  0001 C CNN "ATTRIBUTE"
+	1    6100 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2630
+P 6550 5750
+AR Path="/5E8C8987/5F8C2630" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2630" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2630" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2630" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2630" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2630" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2630" Ref="C190"  Part="1" 
+F 0 "C190" H 6665 5796 50  0000 L CNN
+F 1 "100n" H 6665 5705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6588 5600 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 6550 5750 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 6550 5750 50  0001 C CNN "MPN"
+F 5 "2581045" H 6550 5750 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 6550 5750 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 6550 5750 50  0001 C CNN "ATTRIBUTE"
+	1    6550 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2637
+P 7000 5750
+AR Path="/5E8C8987/5F8C2637" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2637" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2637" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2637" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2637" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2637" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2637" Ref="C191"  Part="1" 
+F 0 "C191" H 7115 5796 50  0000 L CNN
+F 1 "100n" H 7115 5705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7038 5600 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 7000 5750 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 7000 5750 50  0001 C CNN "MPN"
+F 5 "2581045" H 7000 5750 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 7000 5750 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 7000 5750 50  0001 C CNN "ATTRIBUTE"
+	1    7000 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 4600 5150 4600
+Wire Wire Line
+	5650 4600 5650 4700
+Wire Wire Line
+	5650 4600 6100 4600
+Wire Wire Line
+	6100 4600 6100 4700
+Connection ~ 5650 4600
+Wire Wire Line
+	6100 4600 6350 4600
+Wire Wire Line
+	6550 4600 6550 4700
+Connection ~ 6100 4600
+$Comp
+L power:GND #PWR?
+U 1 1 5F8C2645
+P 6350 5150
+AR Path="/5E8C8B3B/5F8C2645" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2645" Ref="#PWR0185"  Part="1" 
+F 0 "#PWR0185" H 6350 4900 50  0001 C CNN
+F 1 "GND" H 6355 4977 50  0000 C CNN
+F 2 "" H 6350 5150 50  0001 C CNN
+F 3 "" H 6350 5150 50  0001 C CNN
+	1    6350 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 5000 5650 5050
+Wire Wire Line
+	5650 5050 6100 5050
+Wire Wire Line
+	6100 5050 6100 5000
+Connection ~ 6100 5050
+Wire Wire Line
+	6100 5050 6350 5050
+Wire Wire Line
+	6550 5050 6550 5000
+Wire Wire Line
+	5050 4700 5150 4700
+Wire Wire Line
+	5150 4700 5150 4600
+Connection ~ 5150 4600
+Wire Wire Line
+	5150 4600 5650 4600
+Wire Wire Line
+	5050 4800 5150 4800
+Wire Wire Line
+	5150 4800 5150 4700
+Connection ~ 5150 4700
+Wire Wire Line
+	5050 5000 5150 5000
+Wire Wire Line
+	5150 5000 5150 5100
+Wire Wire Line
+	5150 5300 5050 5300
+Wire Wire Line
+	5050 5200 5150 5200
+Connection ~ 5150 5200
+Wire Wire Line
+	5150 5200 5150 5300
+Wire Wire Line
+	5050 5100 5150 5100
+Connection ~ 5150 5100
+Wire Wire Line
+	5150 5100 5150 5200
+Wire Wire Line
+	5150 5300 5150 5500
+Wire Wire Line
+	5150 5500 5650 5500
+Wire Wire Line
+	7000 5500 7000 5600
+Connection ~ 5150 5300
+Wire Wire Line
+	6550 5600 6550 5500
+Connection ~ 6550 5500
+Wire Wire Line
+	6550 5500 7000 5500
+Wire Wire Line
+	6100 5600 6100 5500
+Connection ~ 6100 5500
+Wire Wire Line
+	6100 5500 6550 5500
+Wire Wire Line
+	5650 5600 5650 5500
+Connection ~ 5650 5500
+Wire Wire Line
+	5650 5500 6100 5500
+Wire Wire Line
+	5050 6000 5150 6000
+Wire Wire Line
+	5150 6000 5150 6100
+Wire Wire Line
+	5150 6200 5050 6200
+Wire Wire Line
+	5050 6100 5150 6100
+Connection ~ 5150 6100
+Wire Wire Line
+	5150 6100 5150 6200
+Wire Wire Line
+	5150 6000 5650 6000
+Wire Wire Line
+	5650 6000 5650 5900
+Connection ~ 5150 6000
+Wire Wire Line
+	5650 6000 6100 6000
+Wire Wire Line
+	6100 6000 6100 5900
+Connection ~ 5650 6000
+Wire Wire Line
+	6100 6000 6550 6000
+Wire Wire Line
+	6550 6000 6550 5900
+Connection ~ 6100 6000
+Wire Wire Line
+	6550 6000 7000 6000
+Wire Wire Line
+	7000 6000 7000 5900
+Connection ~ 6550 6000
+$Comp
+L power:GND #PWR?
+U 1 1 5F8C2680
+P 5150 6350
+AR Path="/5E8C8B3B/5F8C2680" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2680" Ref="#PWR0186"  Part="1" 
+F 0 "#PWR0186" H 5150 6100 50  0001 C CNN
+F 1 "GND" H 5155 6177 50  0000 C CNN
+F 2 "" H 5150 6350 50  0001 C CNN
+F 3 "" H 5150 6350 50  0001 C CNN
+	1    5150 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 6350 5150 6200
+Connection ~ 5150 6200
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F8C2688
+P 6000 2450
+AR Path="/5E8C8B3B/5F8C2688" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2688" Ref="#PWR0176"  Part="1" 
+F 0 "#PWR0176" H 6000 2300 50  0001 C CNN
+F 1 "+3V3" H 6015 2623 50  0000 C CNN
+F 2 "" H 6000 2450 50  0001 C CNN
+F 3 "" H 6000 2450 50  0001 C CNN
+	1    6000 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2200 5900 2200
+Wire Wire Line
+	7000 2200 7000 2100
+Connection ~ 7000 2100
+$Comp
+L SST25VF010A:SST25VF010A IC?
+U 1 1 5F8C2692
+P 1950 3000
+AR Path="/5E8C8B3B/5F8C2692" Ref="IC?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2692" Ref="IC15"  Part="1" 
+F 0 "IC15" H 2300 3165 50  0000 C CNN
+F 1 "IS25LQ010B" H 2300 3074 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 1950 3000 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1669409.pdf" H 1950 3000 50  0001 C CNN
+F 4 "IS25LQ010B-JNLE" H 1950 3000 50  0001 C CNN "MPN"
+F 5 "2901147" H 1950 3000 50  0001 C CNN "ON_FARNELL"
+	1    1950 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 3100 2750 3100
+Wire Wire Line
+	2750 3200 3450 3200
+Wire Wire Line
+	3450 3300 2750 3300
+Wire Wire Line
+	2750 3400 3450 3400
+$Comp
+L Device:C C?
+U 1 1 5F8C269D
+P 900 3300
+AR Path="/5E8C8987/5F8C269D" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C269D" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C269D" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C269D" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C269D" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C269D" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C269D" Ref="C171"  Part="1" 
+F 0 "C171" H 1015 3346 50  0000 L CNN
+F 1 "100n" H 1015 3255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 938 3150 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 900 3300 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 900 3300 50  0001 C CNN "MPN"
+F 5 "2581045" H 900 3300 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 900 3300 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 900 3300 50  0001 C CNN "ATTRIBUTE"
+	1    900  3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  3150 900  3100
+Wire Wire Line
+	1850 3500 900  3500
+Wire Wire Line
+	900  3500 900  3450
+$Comp
+L power:GND #PWR?
+U 1 1 5F8C26A6
+P 900 3600
+AR Path="/5E8C8B3B/5F8C26A6" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C26A6" Ref="#PWR0181"  Part="1" 
+F 0 "#PWR0181" H 900 3350 50  0001 C CNN
+F 1 "GND" H 905 3427 50  0000 C CNN
+F 2 "" H 900 3600 50  0001 C CNN
+F 3 "" H 900 3600 50  0001 C CNN
+	1    900  3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F8C26AC
+P 900 2400
+AR Path="/5E8C8B3B/5F8C26AC" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C26AC" Ref="#PWR0175"  Part="1" 
+F 0 "#PWR0175" H 900 2250 50  0001 C CNN
+F 1 "+3V3" H 915 2573 50  0000 C CNN
+F 2 "" H 900 2400 50  0001 C CNN
+F 3 "" H 900 2400 50  0001 C CNN
+	1    900  2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  2400 900  2500
+Connection ~ 900  3100
+Wire Wire Line
+	900  3600 900  3500
+Connection ~ 900  3500
+Wire Wire Line
+	900  3100 1850 3100
+$Comp
+L Device:R R?
+U 1 1 5F8C26B8
+P 1300 2750
+AR Path="/5E8C8845/5F8C26B8" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5F8C26B8" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5F8C26B8" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C26B8" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C26B8" Ref="R129"  Part="1" 
+F 0 "R129" H 1370 2796 50  0000 L CNN
+F 1 "10K" H 1370 2705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1230 2750 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 1300 2750 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 1300 2750 50  0001 C CNN "MPN"
+F 5 "1469748" H 1300 2750 50  0001 C CNN "ON_FARNELL"
+	1    1300 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F8C26BF
+P 1650 2750
+AR Path="/5E8C8845/5F8C26BF" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5F8C26BF" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5F8C26BF" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C26BF" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C26BF" Ref="R130"  Part="1" 
+F 0 "R130" H 1720 2796 50  0000 L CNN
+F 1 "10K" H 1720 2705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1580 2750 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 1650 2750 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 1650 2750 50  0001 C CNN "MPN"
+F 5 "1469748" H 1650 2750 50  0001 C CNN "ON_FARNELL"
+	1    1650 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  2500 1300 2500
+Wire Wire Line
+	1300 2500 1300 2600
+Connection ~ 900  2500
+Wire Wire Line
+	900  2500 900  3100
+Wire Wire Line
+	1300 2500 1650 2500
+Wire Wire Line
+	1650 2500 1650 2600
+Connection ~ 1300 2500
+Wire Wire Line
+	1650 2900 1650 3200
+Wire Wire Line
+	1650 3200 1850 3200
+Wire Wire Line
+	1300 2900 1300 3300
+Wire Wire Line
+	1300 3300 1850 3300
+$Comp
+L Device:R R?
+U 1 1 5F8C26D1
+P 3200 1750
+AR Path="/5E8C8845/5F8C26D1" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5F8C26D1" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5F8C26D1" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C26D1" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C26D1" Ref="R123"  Part="1" 
+F 0 "R123" H 3270 1796 50  0000 L CNN
+F 1 "10K" H 3270 1705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3130 1750 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 3200 1750 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 3200 1750 50  0001 C CNN "MPN"
+F 5 "1469748" H 3200 1750 50  0001 C CNN "ON_FARNELL"
+	1    3200 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2000 3200 2000
+Wire Wire Line
+	3200 2000 3200 1900
+Wire Wire Line
+	3450 1500 3200 1500
+Wire Wire Line
+	3200 1500 3200 1600
+$Comp
+L Device:R R?
+U 1 1 5F8C26DC
+P 2800 1750
+AR Path="/5E8C8845/5F8C26DC" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5F8C26DC" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5F8C26DC" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C26DC" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C26DC" Ref="R122"  Part="1" 
+F 0 "R122" H 2870 1796 50  0000 L CNN
+F 1 "10K" H 2870 1705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2730 1750 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 2800 1750 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 2800 1750 50  0001 C CNN "MPN"
+F 5 "1469748" H 2800 1750 50  0001 C CNN "ON_FARNELL"
+	1    2800 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1100 2100 1100
+Wire Wire Line
+	2100 1100 2100 900 
+Wire Wire Line
+	2100 900  1800 900 
+Wire Wire Line
+	1800 1200 3450 1200
+$Comp
+L power:GND #PWR?
+U 1 1 5F8C26E6
+P 2800 2000
+AR Path="/5E8C8B3B/5F8C26E6" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C26E6" Ref="#PWR0173"  Part="1" 
+F 0 "#PWR0173" H 2800 1750 50  0001 C CNN
+F 1 "GND" H 2805 1827 50  0000 C CNN
+F 2 "" H 2800 2000 50  0001 C CNN
+F 3 "" H 2800 2000 50  0001 C CNN
+	1    2800 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 1900 2800 2000
+$Comp
+L Device:R R?
+U 1 1 5F8C26EE
+P 2450 1400
+AR Path="/5E8C8845/5F8C26EE" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5F8C26EE" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5F8C26EE" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C26EE" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C26EE" Ref="R121"  Part="1" 
+F 0 "R121" H 2520 1446 50  0000 L CNN
+F 1 "90K9" H 2520 1355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2380 1400 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 2450 1400 50  0001 C CNN
+F 4 "CRCW060390K9FKEA" H 2450 1400 50  0001 C CNN "MPN"
+F 5 "2138493" H 2450 1400 50  0001 C CNN "ON_FARNELL"
+	1    2450 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 1400 2800 1400
+Wire Wire Line
+	2800 1400 2800 1600
+Wire Wire Line
+	2800 1400 2600 1400
+Connection ~ 2800 1400
+Wire Wire Line
+	2300 1400 2100 1400
+$Comp
+L Device:R R?
+U 1 1 5F8C2700
+P 5650 2600
+AR Path="/5E8C8845/5F8C2700" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5F8C2700" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5F8C2700" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2700" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2700" Ref="R128"  Part="1" 
+F 0 "R128" H 5720 2646 50  0000 L CNN
+F 1 "10K" H 5720 2555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5580 2600 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 5650 2600 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 5650 2600 50  0001 C CNN "MPN"
+F 5 "1469748" H 5650 2600 50  0001 C CNN "ON_FARNELL"
+	1    5650 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F8C2707
+P 5650 2500
+AR Path="/5E8C8845/5F8C2707" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5F8C2707" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5F8C2707" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2707" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2707" Ref="R127"  Part="1" 
+F 0 "R127" H 5720 2546 50  0000 L CNN
+F 1 "10K" H 5720 2455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5580 2500 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 5650 2500 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 5650 2500 50  0001 C CNN "MPN"
+F 5 "1469748" H 5650 2500 50  0001 C CNN "ON_FARNELL"
+	1    5650 2500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5050 2600 5500 2600
+Wire Wire Line
+	5500 2500 5050 2500
+Wire Wire Line
+	6000 2450 6000 2500
+Wire Wire Line
+	6000 2500 5800 2500
+Wire Wire Line
+	5800 2600 6000 2600
+Wire Wire Line
+	6000 2600 6000 2500
+Connection ~ 6000 2500
+$Comp
+L Device:C C?
+U 1 1 5F8C2715
+P 6750 2100
+AR Path="/5E8C8845/5F8C2715" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2715" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2715" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2715" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2715" Ref="C168"  Part="1" 
+F 0 "C168" V 6600 2100 50  0000 C CNN
+F 1 "33p" V 6900 2100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6788 1950 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C330J5GACTU.pdf" H 6750 2100 50  0001 C CNN
+F 4 "C0603C330J5GACTU" V 6750 2100 50  0001 C CNN "MPN"
+F 5 "1414633" H 6750 2100 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 6750 2100 50  0001 C CNN "LCSC_PART_NO"
+	1    6750 2100
+	0    1    1    0   
+$EndComp
+Text Notes 6150 2600 0    50   ~ 0
+40 MHz oscillator \nfrequency selection
+$Comp
+L power:+1V1 #PWR?
+U 1 1 5F8C271C
+P 8150 3250
+AR Path="/5E8C8B3B/5F8C271C" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C271C" Ref="#PWR0180"  Part="1" 
+F 0 "#PWR0180" H 8150 3100 50  0001 C CNN
+F 1 "+1V1" H 8165 3423 50  0000 C CNN
+F 2 "" H 8150 3250 50  0001 C CNN
+F 3 "" H 8150 3250 50  0001 C CNN
+	1    8150 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 3250 8150 3400
+Connection ~ 8150 3400
+Wire Wire Line
+	8150 3400 8350 3400
+Wire Wire Line
+	8150 4000 8150 3900
+Connection ~ 8150 3900
+Wire Wire Line
+	8150 3900 8350 3900
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F8C2728
+P 6350 4450
+AR Path="/5E8C8B3B/5F8C2728" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2728" Ref="#PWR0183"  Part="1" 
+F 0 "#PWR0183" H 6350 4300 50  0001 C CNN
+F 1 "+3V3" H 6365 4623 50  0000 C CNN
+F 2 "" H 6350 4450 50  0001 C CNN
+F 3 "" H 6350 4450 50  0001 C CNN
+	1    6350 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 4450 6350 4600
+Connection ~ 6350 4600
+Wire Wire Line
+	6350 4600 6550 4600
+Wire Wire Line
+	6350 5150 6350 5050
+Connection ~ 6350 5050
+Wire Wire Line
+	6350 5050 6550 5050
+$Comp
+L Device:L FB?
+U 1 1 5F8C2735
+P 7500 5150
+AR Path="/5E8C8845/5F8C2735" Ref="FB?"  Part="1" 
+AR Path="/5F37F386/5F8C2735" Ref="FB?"  Part="1" 
+AR Path="/5F38055E/5F8C2735" Ref="FB?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2735" Ref="FB?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2735" Ref="FB15"  Part="1" 
+F 0 "FB15" H 7457 5104 50  0000 R CNN
+F 1 "2.0A" H 7457 5195 50  0000 R CNN
+F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7500 5150 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1740433.pdf" H 7500 5150 50  0001 C CNN
+F 4 "BLM18PG121SN1D" V 7500 5150 50  0001 C CNN "MPN"
+F 5 "1515738" H 7500 5150 50  0001 C CNN "ON_FARNELL"
+	1    7500 5150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7000 4600 6550 4600
+Connection ~ 6550 4600
+Text Notes 5400 900  0    50   ~ 0
+100 Ohm differential impedance\n50 Ohm single ended impedance
+$Comp
+L Device:C C?
+U 1 1 5F8C2749
+P 8250 1100
+AR Path="/5E8C8987/5F8C2749" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2749" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2749" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2749" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2749" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2749" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2749" Ref="C162"  Part="1" 
+F 0 "C162" V 8300 1150 50  0000 L CNN
+F 1 "10n" V 8300 900 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8288 950 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C103K1RACTU.pdf" H 8250 1100 50  0001 C CNN
+F 4 "C0603C103K1RACTU" H 8250 1100 50  0001 C CNN "MPN"
+F 5 "1865545" H 8250 1100 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 8250 1100 50  0001 C CNN "LCSC_PART_NO"
+	1    8250 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2751
+P 8600 1200
+AR Path="/5E8C8987/5F8C2751" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2751" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2751" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2751" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2751" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2751" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2751" Ref="C163"  Part="1" 
+F 0 "C163" V 8650 950 50  0000 L CNN
+F 1 "10n" V 8650 1250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8638 1050 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C103K1RACTU.pdf" H 8600 1200 50  0001 C CNN
+F 4 "C0603C103K1RACTU" H 8600 1200 50  0001 C CNN "MPN"
+F 5 "1865545" H 8600 1200 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 8600 1200 50  0001 C CNN "LCSC_PART_NO"
+	1    8600 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2759
+P 8250 1400
+AR Path="/5E8C8987/5F8C2759" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2759" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2759" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2759" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2759" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2759" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2759" Ref="C164"  Part="1" 
+F 0 "C164" V 8300 1450 50  0000 L CNN
+F 1 "10n" V 8300 1200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8288 1250 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C103K1RACTU.pdf" H 8250 1400 50  0001 C CNN
+F 4 "C0603C103K1RACTU" H 8250 1400 50  0001 C CNN "MPN"
+F 5 "1865545" H 8250 1400 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 8250 1400 50  0001 C CNN "LCSC_PART_NO"
+	1    8250 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C2760
+P 8600 1500
+AR Path="/5E8C8987/5F8C2760" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C2760" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C2760" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C2760" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C2760" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2760" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2760" Ref="C165"  Part="1" 
+F 0 "C165" V 8650 1250 50  0000 L CNN
+F 1 "10n" V 8650 1550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8638 1350 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C103K1RACTU.pdf" H 8600 1500 50  0001 C CNN
+F 4 "C0603C103K1RACTU" H 8600 1500 50  0001 C CNN "MPN"
+F 5 "1865545" H 8600 1500 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 8600 1500 50  0001 C CNN "LCSC_PART_NO"
+	1    8600 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F8C2770
+P 9050 2800
+AR Path="/5E8C8845/5F8C2770" Ref="#PWR?"  Part="1" 
+AR Path="/5F37F386/5F8C2770" Ref="#PWR?"  Part="1" 
+AR Path="/5F38055E/5F8C2770" Ref="#PWR?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2770" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2770" Ref="#PWR0177"  Part="1" 
+F 0 "#PWR0177" H 9050 2550 50  0001 C CNN
+F 1 "GND" V 9055 2672 50  0000 R CNN
+F 2 "" H 9050 2800 50  0001 C CNN
+F 3 "" H 9050 2800 50  0001 C CNN
+	1    9050 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 1000 9100 1000
+Wire Wire Line
+	9100 1300 9050 1300
+Connection ~ 9050 1300
+Wire Wire Line
+	9050 1300 9050 1000
+Wire Wire Line
+	9050 2800 9050 1600
+Wire Notes Line
+	5350 700  5350 1500
+Wire Notes Line
+	5350 1500 5600 1500
+Wire Notes Line
+	5600 1500 5600 950 
+Wire Notes Line
+	5600 950  6700 950 
+Wire Notes Line
+	6700 950  6700 700 
+Wire Notes Line
+	6700 700  5350 700 
+$Comp
+L Device:R R?
+U 1 1 5F8C2782
+P 1950 5450
+AR Path="/5E8C8845/5F8C2782" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5F8C2782" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5F8C2782" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C2782" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2782" Ref="R132"  Part="1" 
+F 0 "R132" H 2020 5496 50  0000 L CNN
+F 1 "330" H 2020 5405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1880 5450 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 1950 5450 50  0001 C CNN
+F 4 "CRCW0603330RFKEA" H 1950 5450 50  0001 C CNN "MPN"
+F 5 "1469803" H 1950 5450 50  0001 C CNN "ON_FARNELL"
+	1    1950 5450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5F8C2788
+P 1950 5050
+AR Path="/5E8C8B3B/5F8C2788" Ref="D?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C2788" Ref="D22"  Part="1" 
+F 0 "D22" V 1989 4933 50  0000 R CNN
+F 1 "LED" V 1898 4933 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1950 5050 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1854080.pdf" H 1950 5050 50  0001 C CNN
+F 4 "KP-2012LSGC" H 1950 5050 50  0001 C CNN "MPN"
+F 5 "2463991" H 1950 5050 50  0001 C CNN "ON_FARNELL"
+	1    1950 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F8C278E
+P 1950 4800
+AR Path="/5E8C8B3B/5F8C278E" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C278E" Ref="#PWR0184"  Part="1" 
+F 0 "#PWR0184" H 1950 4650 50  0001 C CNN
+F 1 "+3V3" H 1965 4973 50  0000 C CNN
+F 2 "" H 1950 4800 50  0001 C CNN
+F 3 "" H 1950 4800 50  0001 C CNN
+	1    1950 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 5700 1950 5700
+Wire Wire Line
+	1950 5700 1950 5600
+Wire Wire Line
+	1950 5300 1950 5200
+Wire Wire Line
+	1950 4900 1950 4850
+Text Notes 1550 5150 0    50   ~ 0
+Disk\nactivity
+$Comp
+L Device:R R?
+U 1 1 5F8C279A
+P 7750 2250
+AR Path="/5E8C8845/5F8C279A" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5F8C279A" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5F8C279A" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C279A" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C279A" Ref="R125"  Part="1" 
+F 0 "R125" H 7820 2296 50  0000 L CNN
+F 1 "10K" H 7820 2205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7680 2250 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 7750 2250 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 7750 2250 50  0001 C CNN "MPN"
+F 5 "1469748" H 7750 2250 50  0001 C CNN "ON_FARNELL"
+	1    7750 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8C27A1
+P 7750 2850
+AR Path="/5E8C8987/5F8C27A1" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F8C27A1" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F8C27A1" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F8C27A1" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F8C27A1" Ref="C?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C27A1" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C27A1" Ref="C170"  Part="1" 
+F 0 "C170" H 7865 2896 50  0000 L CNN
+F 1 "100n" H 7865 2805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7788 2700 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104M4RACTU.pdf" H 7750 2850 50  0001 C CNN
+F 4 "C0603C104M4RACTU" H 7750 2850 50  0001 C CNN "MPN"
+F 5 "2581045" H 7750 2850 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 7750 2850 50  0001 C CNN "LCSC_PART_NO"
+F 7 "16V" H 7750 2850 50  0001 C CNN "ATTRIBUTE"
+	1    7750 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F8C27A7
+P 7750 3050
+AR Path="/5E8C8845/5F8C27A7" Ref="#PWR?"  Part="1" 
+AR Path="/5F37F386/5F8C27A7" Ref="#PWR?"  Part="1" 
+AR Path="/5F38055E/5F8C27A7" Ref="#PWR?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C27A7" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C27A7" Ref="#PWR0179"  Part="1" 
+F 0 "#PWR0179" H 7750 2800 50  0001 C CNN
+F 1 "GND" H 7755 2877 50  0000 C CNN
+F 2 "" H 7750 3050 50  0001 C CNN
+F 3 "" H 7750 3050 50  0001 C CNN
+	1    7750 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 3000 7750 3050
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F8C27AE
+P 7750 1950
+AR Path="/5E8C8845/5F8C27AE" Ref="#PWR?"  Part="1" 
+AR Path="/5F37F386/5F8C27AE" Ref="#PWR?"  Part="1" 
+AR Path="/5F38055E/5F8C27AE" Ref="#PWR?"  Part="1" 
+AR Path="/5E8C8B3B/5F8C27AE" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5F8C27AE" Ref="#PWR0172"  Part="1" 
+F 0 "#PWR0172" H 7750 1800 50  0001 C CNN
+F 1 "+3V3" H 7765 2123 50  0000 C CNN
+F 2 "" H 7750 1950 50  0001 C CNN
+F 3 "" H 7750 1950 50  0001 C CNN
+	1    7750 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 2400 7750 2550
+Wire Wire Line
+	7750 1950 7750 2100
+Wire Wire Line
+	7750 2550 7100 2550
+Wire Wire Line
+	7100 2550 7100 3000
+Wire Wire Line
+	7100 3000 5050 3000
+Connection ~ 7750 2550
+Wire Wire Line
+	7750 2550 7750 2700
+$Comp
+L Device:C C?
+U 1 1 5F9154F9
+P 7000 4850
+AR Path="/5E8C8987/5F9154F9" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F9154F9" Ref="C187"  Part="1" 
+F 0 "C187" H 7115 4896 50  0000 L CNN
+F 1 "47u" H 7115 4805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7038 4700 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2047835.pdf" H 7000 4850 50  0001 C CNN
+F 4 "GRM21BR60J476ME15L" H 7000 4850 50  0001 C CNN "MPN"
+F 5 "2362109" H 7000 4850 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 7000 4850 50  0001 C CNN "LCSC_PART_NO"
+	1    7000 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 5050 7000 5050
+Wire Wire Line
+	7000 5050 7000 5000
+Connection ~ 6550 5050
+Wire Wire Line
+	7000 4700 7000 4600
+Wire Wire Line
+	7000 4600 7500 4600
+Wire Wire Line
+	7500 4600 7500 5000
+Connection ~ 7000 4600
+Wire Wire Line
+	7000 5500 7500 5500
+Wire Wire Line
+	7500 5500 7500 5300
+Connection ~ 7000 5500
+$Comp
+L Device:C C?
+U 1 1 5F97ED56
+P 10600 3650
+AR Path="/5E8C8987/5F97ED56" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F97ED56" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5F97ED56" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5F97ED56" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5F97ED56" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F97ED56" Ref="C183"  Part="1" 
+F 0 "C183" H 10715 3696 50  0000 L CNN
+F 1 "4u7" H 10715 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10638 3500 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2079186.pdf" H 10600 3650 50  0001 C CNN
+F 4 "GRM21BR61H475KE51L" H 10600 3650 50  0001 C CNN "MPN"
+F 5 "2611942" H 10600 3650 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 10600 3650 50  0001 C CNN "LCSC_PART_NO"
+F 7 "50V" H 10600 3650 50  0001 C CNN "ATTRIBUTE"
+	1    10600 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 3400 10600 3400
+Wire Wire Line
+	10600 3400 10600 3500
+Connection ~ 10150 3400
+Wire Wire Line
+	10150 3900 10600 3900
+Wire Wire Line
+	10600 3900 10600 3800
+Connection ~ 10150 3900
+Wire Wire Line
+	9100 1600 9050 1600
+Connection ~ 9050 1600
+Wire Wire Line
+	9050 1600 9050 1300
+Text Label 2250 1200 0    50   ~ 0
+SATA1C-
+Text Label 2250 1100 0    50   ~ 0
+SATA1C+
+Text Label 6100 1100 2    50   ~ 0
+SATA1_TX+
+Text Label 6100 1200 2    50   ~ 0
+SATA1_TX-
+Text Label 6100 1300 2    50   ~ 0
+SATA1_RX+
+Text Label 6100 1400 2    50   ~ 0
+SATA1_RX-
+$Comp
+L power:+5V #PWR0169
+U 1 1 5F07233C
+P 2100 1400
+F 0 "#PWR0169" H 2100 1250 50  0001 C CNN
+F 1 "+5V" V 2115 1528 50  0000 L CNN
+F 2 "" H 2100 1400 50  0001 C CNN
+F 3 "" H 2100 1400 50  0001 C CNN
+	1    2100 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_SATA:Conn_SATA J16
+U 1 1 5F9A46FC
+P 9200 900
+F 0 "J16" H 9350 950 50  0000 C CNN
+F 1 "Conn_SATA" V 9700 100 150 0000 C CNN
+F 2 "87678-1001:87678-1001" H 9200 900 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2832428.pdf" H 9200 900 50  0001 C CNN
+F 4 "87678-1001" H 9200 900 50  0001 C CNN "MPN"
+F 5 "3226185" H 9200 900 50  0001 C CNN "ON_FARNELL"
+	1    9200 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F9CC2DB
+P 10550 1000
+AR Path="/5E8C87A2/5F9CC2DB" Ref="R?"  Part="1" 
+AR Path="/5F6C36AD/5F9CC2DB" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F9CC2DB" Ref="R117"  Part="1" 
+F 0 "R117" V 10600 700 50  0000 L CNN
+F 1 "0R" V 10600 1150 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 10480 1000 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 10550 1000 50  0001 C CNN
+F 4 "CRCW08050000Z0EA" H 10550 1000 50  0001 C CNN "MPN"
+F 5 "1469846" H 10550 1000 50  0001 C CNN "ON_FARNELL"
+	1    10550 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F9D9752
+P 10900 1100
+AR Path="/5E8C87A2/5F9D9752" Ref="R?"  Part="1" 
+AR Path="/5F6C36AD/5F9D9752" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F9D9752" Ref="R118"  Part="1" 
+F 0 "R118" V 11050 850 50  0000 L CNN
+F 1 "0R" V 10950 1250 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 10830 1100 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 10900 1100 50  0001 C CNN
+F 4 "CRCW08050000Z0EA" H 10900 1100 50  0001 C CNN "MPN"
+F 5 "1469846" H 10900 1100 50  0001 C CNN "ON_FARNELL"
+	1    10900 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F9D9BEF
+P 10550 1200
+AR Path="/5E8C87A2/5F9D9BEF" Ref="R?"  Part="1" 
+AR Path="/5F6C36AD/5F9D9BEF" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F9D9BEF" Ref="R120"  Part="1" 
+F 0 "R120" V 10450 1100 50  0000 L CNN
+F 1 "0R" V 10600 1350 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 10480 1200 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 10550 1200 50  0001 C CNN
+F 4 "CRCW08050000Z0EA" H 10550 1200 50  0001 C CNN "MPN"
+F 5 "1469846" H 10550 1200 50  0001 C CNN "ON_FARNELL"
+	1    10550 1200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10400 1000 10300 1000
+Wire Wire Line
+	10300 1100 10750 1100
+Wire Wire Line
+	10400 1200 10300 1200
+Wire Wire Line
+	10700 1200 11150 1200
+Wire Wire Line
+	11150 1200 11150 1100
+Wire Wire Line
+	10700 1000 10950 1000
+Wire Wire Line
+	11050 1100 11150 1100
+Connection ~ 11150 1100
+Wire Wire Line
+	11150 1100 11150 1000
+$Comp
+L power:+3V3 #PWR0168
+U 1 1 5FA3AEEB
+P 10950 800
+F 0 "#PWR0168" H 10950 650 50  0001 C CNN
+F 1 "+3V3" H 10965 973 50  0000 C CNN
+F 2 "" H 10950 800 50  0001 C CNN
+F 3 "" H 10950 800 50  0001 C CNN
+	1    10950 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10950 800  10950 1000
+Connection ~ 10950 1000
+Wire Wire Line
+	10950 1000 11150 1000
+$Comp
+L power:GND #PWR?
+U 1 1 5FA581F6
+P 10400 2800
+AR Path="/5E8C8845/5FA581F6" Ref="#PWR?"  Part="1" 
+AR Path="/5F37F386/5FA581F6" Ref="#PWR?"  Part="1" 
+AR Path="/5F38055E/5FA581F6" Ref="#PWR?"  Part="1" 
+AR Path="/5E8C8B3B/5FA581F6" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5FA581F6" Ref="#PWR0178"  Part="1" 
+F 0 "#PWR0178" H 10400 2550 50  0001 C CNN
+F 1 "GND" V 10405 2672 50  0000 R CNN
+F 2 "" H 10400 2800 50  0001 C CNN
+F 3 "" H 10400 2800 50  0001 C CNN
+	1    10400 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10400 2800 10400 2700
+Wire Wire Line
+	10400 1300 10300 1300
+Wire Wire Line
+	10300 1400 10400 1400
+Connection ~ 10400 1400
+Wire Wire Line
+	10400 1400 10400 1300
+Wire Wire Line
+	10300 1500 10400 1500
+Connection ~ 10400 1500
+Wire Wire Line
+	10400 1500 10400 1400
+Wire Wire Line
+	10300 1900 10400 1900
+Connection ~ 10400 1900
+Wire Wire Line
+	10400 1900 10400 1500
+Wire Wire Line
+	10300 2100 10400 2100
+Connection ~ 10400 2100
+Wire Wire Line
+	10400 2100 10400 1900
+$Comp
+L Device:C C?
+U 1 1 5FAA2742
+P 10700 1850
+AR Path="/5E8C8987/5FAA2742" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5FAA2742" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5FAA2742" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5FAA2742" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5FAA2742" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5FAA2742" Ref="C167"  Part="1" 
+F 0 "C167" H 10815 1896 50  0000 L CNN
+F 1 "4u7" H 10815 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10738 1700 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2079186.pdf" H 10700 1850 50  0001 C CNN
+F 4 "GRM21BR61H475KE51L" H 10700 1850 50  0001 C CNN "MPN"
+F 5 "2611942" H 10700 1850 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 10700 1850 50  0001 C CNN "LCSC_PART_NO"
+F 7 "50V" H 10700 1850 50  0001 C CNN "ATTRIBUTE"
+	1    10700 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FAA3CF1
+P 10700 2450
+AR Path="/5E8C8987/5FAA3CF1" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5FAA3CF1" Ref="C?"  Part="1" 
+AR Path="/5E8C8845/5FAA3CF1" Ref="C?"  Part="1" 
+AR Path="/5F37F386/5FAA3CF1" Ref="C?"  Part="1" 
+AR Path="/5F38055E/5FAA3CF1" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5FAA3CF1" Ref="C169"  Part="1" 
+F 0 "C169" H 10815 2496 50  0000 L CNN
+F 1 "4u7" H 10815 2405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10738 2300 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2079186.pdf" H 10700 2450 50  0001 C CNN
+F 4 "GRM21BR61H475KE51L" H 10700 2450 50  0001 C CNN "MPN"
+F 5 "2611942" H 10700 2450 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 10700 2450 50  0001 C CNN "LCSC_PART_NO"
+F 7 "50V" H 10900 2300 50  0000 C CNN "ATTRIBUTE"
+	1    10700 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10700 2600 10700 2700
+Wire Wire Line
+	10700 2700 10400 2700
+Connection ~ 10400 2700
+Wire Wire Line
+	10400 2700 10400 2100
+Wire Wire Line
+	10700 2000 10700 2100
+Wire Wire Line
+	10700 2100 10400 2100
+Wire Wire Line
+	10300 2200 10500 2200
+Wire Wire Line
+	10700 2200 10700 2300
+Wire Wire Line
+	10300 2300 10500 2300
+Wire Wire Line
+	10500 2300 10500 2200
+Connection ~ 10500 2200
+Wire Wire Line
+	10500 2200 10700 2200
+Wire Wire Line
+	10300 2400 10500 2400
+Wire Wire Line
+	10500 2400 10500 2300
+Connection ~ 10500 2300
+Wire Wire Line
+	10300 1800 10500 1800
+Wire Wire Line
+	10500 1800 10500 1700
+Wire Wire Line
+	10500 1600 10700 1600
+Wire Wire Line
+	10700 1600 10700 1700
+Wire Wire Line
+	10300 1600 10500 1600
+Connection ~ 10500 1600
+Wire Wire Line
+	10300 1700 10500 1700
+Connection ~ 10500 1700
+Wire Wire Line
+	10500 1700 10500 1600
+$Comp
+L power:+5V #PWR0170
+U 1 1 5FB44812
+P 10950 1500
+F 0 "#PWR0170" H 10950 1350 50  0001 C CNN
+F 1 "+5V" H 10965 1673 50  0000 C CNN
+F 2 "" H 10950 1500 50  0001 C CNN
+F 3 "" H 10950 1500 50  0001 C CNN
+	1    10950 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10700 1600 10950 1600
+Wire Wire Line
+	10950 1600 10950 1500
+Connection ~ 10700 1600
+$Comp
+L power:+12V #PWR0174
+U 1 1 5FB56701
+P 11050 2100
+F 0 "#PWR0174" H 11050 1950 50  0001 C CNN
+F 1 "+12V" H 11065 2273 50  0000 C CNN
+F 2 "" H 11050 2100 50  0001 C CNN
+F 3 "" H 11050 2100 50  0001 C CNN
+	1    11050 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10700 2200 11050 2200
+Wire Wire Line
+	11050 2200 11050 2100
+Connection ~ 10700 2200
+Wire Wire Line
+	5050 1100 6100 1100
+Wire Wire Line
+	6100 1200 5050 1200
+Wire Wire Line
+	6100 1300 5050 1300
+Wire Wire Line
+	6100 1400 5050 1400
+Wire Wire Line
+	8450 1500 7550 1500
+Wire Wire Line
+	8100 1400 7550 1400
+Wire Wire Line
+	8450 1200 7550 1200
+Wire Wire Line
+	8100 1100 7550 1100
+Text Label 7550 1100 0    50   ~ 0
+SATA1_TX-
+Text Label 7550 1200 0    50   ~ 0
+SATA1_TX+
+Text Label 7550 1500 0    50   ~ 0
+SATA1_RX+
+Text Label 7550 1400 0    50   ~ 0
+SATA1_RX-
+Text Notes 7700 900  0    50   ~ 10
+WARNING: TX Polarity Swap !!!\nSelect appropriate firmware version!
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 5FCFC47C
+P 1000 6800
+AR Path="/5FCFC47C" Ref="H?"  Part="1" 
+AR Path="/5F5BE5BB/5FCFC47C" Ref="H11"  Part="1" 
+F 0 "H11" H 1100 6803 50  0000 L CNN
+F 1 "MountingHole_Pad" H 1100 6758 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 1000 6800 50  0001 C CNN
+F 3 "" H 1000 6800 50  0001 C CNN
+	1    1000 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 5FCFC482
+P 1500 6800
+AR Path="/5FCFC482" Ref="H?"  Part="1" 
+AR Path="/5F5BE5BB/5FCFC482" Ref="H12"  Part="1" 
+F 0 "H12" H 1600 6803 50  0000 L CNN
+F 1 "MountingHole_Pad" H 1600 6758 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 1500 6800 50  0001 C CNN
+F 3 "" H 1500 6800 50  0001 C CNN
+	1    1500 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5FCFC488
+P 1000 7100
+AR Path="/5FCFC488" Ref="#PWR?"  Part="1" 
+AR Path="/5F5BE5BB/5FCFC488" Ref="#PWR0187"  Part="1" 
+F 0 "#PWR0187" H 1000 6900 50  0001 C CNN
+F 1 "GNDPWR" H 1004 6946 50  0000 C CNN
+F 2 "" H 1000 7050 50  0001 C CNN
+F 3 "" H 1000 7050 50  0001 C CNN
+	1    1000 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 6900 1000 7000
+Wire Wire Line
+	1000 7000 1500 7000
+Wire Wire Line
+	1500 7000 1500 6900
+Connection ~ 1000 7000
+Wire Wire Line
+	1000 7000 1000 7100
+$Comp
+L Graphic:Logo_Open_Hardware_Small #LOGO?
+U 1 1 5F66CEA3
+P 10900 6900
+AR Path="/5F66CEA3" Ref="#LOGO?"  Part="1" 
+AR Path="/5F5BE5BB/5F66CEA3" Ref="#LOGO14"  Part="1" 
+F 0 "#LOGO14" H 10900 7175 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 10900 6675 50  0001 C CNN
+F 2 "" H 10900 6900 50  0001 C CNN
+F 3 "~" H 10900 6900 50  0001 C CNN
+	1    10900 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F724EFD
+P 7500 5750
+AR Path="/5E8C8B3B/5F724EFD" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F724EFD" Ref="C192"  Part="1" 
+F 0 "C192" H 7615 5796 50  0000 L CNN
+F 1 "1u" H 7615 5705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7538 5600 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0805C105K3PACTU.pdf" H 7500 5750 50  0001 C CNN
+F 4 "C0805C105K3PACTU" H 7500 5750 50  0001 C CNN "MPN"
+F 5 "1463389" H 7500 5750 50  0001 C CNN "ON_FARNELL"
+	1    7500 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 6000 7500 5900
+$Comp
+L Device:C C?
+U 1 1 5F724F06
+P 8000 5750
+AR Path="/5E8C8B3B/5F724F06" Ref="C?"  Part="1" 
+AR Path="/5F5BE5BB/5F724F06" Ref="C193"  Part="1" 
+F 0 "C193" H 8115 5796 50  0000 L CNN
+F 1 "10u" H 8115 5705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8038 5600 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0805C106K8RACTU.pdf" H 8000 5750 50  0001 C CNN
+F 4 "C0805C106K8RACTU" H 8000 5750 50  0001 C CNN "MPN"
+F 5 "2118132" H 8000 5750 50  0001 C CNN "ON_FARNELL"
+	1    8000 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5500 8000 5600
+Wire Wire Line
+	7500 6000 8000 6000
+Wire Wire Line
+	8000 6000 8000 5900
+Wire Wire Line
+	8000 5500 7500 5500
+Connection ~ 7500 5500
+Wire Wire Line
+	7500 5500 7500 5600
+Wire Wire Line
+	7500 6000 7000 6000
+Connection ~ 7500 6000
+Connection ~ 7000 6000
+Text Notes 7200 2300 1    50   ~ 0
+According to data sheet, VSSOSC \nshould NOT be connected to GND!
+$Comp
+L Device:R R?
+U 1 1 5F861912
+P 2200 2500
+AR Path="/5E8C8845/5F861912" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5F861912" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5F861912" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F861912" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F861912" Ref="R126"  Part="1" 
+F 0 "R126" H 2270 2546 50  0000 L CNN
+F 1 "10K" H 2270 2455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2130 2500 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 2200 2500 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 2200 2500 50  0001 C CNN "MPN"
+F 5 "1469748" H 2200 2500 50  0001 C CNN "ON_FARNELL"
+	1    2200 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2050 2500 1650 2500
+Connection ~ 1650 2500
+Wire Wire Line
+	2350 2500 2950 2500
+Wire Wire Line
+	2950 2500 2950 3500
+Wire Wire Line
+	2950 3500 3450 3500
+$Comp
+L Device:R R?
+U 1 1 5F8893DF
+P 2350 4850
+AR Path="/5E8C8845/5F8893DF" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5F8893DF" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5F8893DF" Ref="R?"  Part="1" 
+AR Path="/5E8C8B3B/5F8893DF" Ref="R?"  Part="1" 
+AR Path="/5F5BE5BB/5F8893DF" Ref="R131"  Part="1" 
+F 0 "R131" H 2420 4896 50  0000 L CNN
+F 1 "10K" H 2420 4805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2280 4850 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 2350 4850 50  0001 C CNN
+F 4 "CRCW060310K0FKEA" H 2350 4850 50  0001 C CNN "MPN"
+F 5 "1469748" H 2350 4850 50  0001 C CNN "ON_FARNELL"
+	1    2350 4850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2200 4850 1950 4850
+Connection ~ 1950 4850
+Wire Wire Line
+	1950 4850 1950 4800
+Wire Wire Line
+	2500 4850 2900 4850
+Wire Wire Line
+	2900 4850 2900 5200
+Wire Wire Line
+	2900 5200 3450 5200
+Text Notes 1300 3900 0    50   ~ 0
+!!! CRITICAL !!! This MUST be this exact flash, \nor one that supports 256bytes page writes\nwith the 0x02 command!
+Wire Wire Line
+	6000 1850 5900 1850
+Wire Wire Line
+	5900 1850 5900 2200
+Connection ~ 5900 2200
+Wire Wire Line
+	5900 2200 7000 2200
+Text Label 8450 1100 0    50   ~ 0
+S1TX-
+Text Label 8800 1200 0    50   ~ 0
+S1TX+
+Text Label 8450 1400 0    50   ~ 0
+S1RX-
+Text Label 8800 1500 0    50   ~ 0
+S1RX+
+Wire Wire Line
+	8400 1100 9100 1100
+Wire Wire Line
+	8750 1200 9100 1200
+Wire Wire Line
+	8400 1400 9100 1400
+Wire Wire Line
+	8750 1500 9100 1500
+Text Notes 5650 6350 0    50   ~ 0
+This schematic follows roughly the reccommendations \ngiven in the TUSB9262 Implementation Guide\nhttps://www.ti.com/lit/pdf/slla315
+$EndSCHEMATC

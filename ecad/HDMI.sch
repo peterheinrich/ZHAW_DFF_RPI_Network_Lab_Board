@@ -1,0 +1,540 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 19
+Title "Raspberry Pi Network Lab Board"
+Date "2020-11-04"
+Rev "B"
+Comp "ZHAW School of Management and Law"
+Comment1 "Funded by ZHAW digital"
+Comment2 "http://cern.ch/cern-ohl"
+Comment3 "Licensed under CERN-OHL-P V. 2.0"
+Comment4 "(c) Copyright 2020 Peter Heinrich, ZHAW"
+$EndDescr
+$Comp
+L Device:R R17
+U 1 1 5F6BBBC3
+P 9600 4950
+AR Path="/5E8C857B/5F6BBBC3" Ref="R17"  Part="1" 
+AR Path="/5E8C87A2/5F6BBBC3" Ref="R?"  Part="1" 
+AR Path="/5E8C85D5/5F6BBBC3" Ref="R?"  Part="1" 
+F 0 "R17" H 9670 4996 50  0000 L CNN
+F 1 "0R" H 9670 4905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9530 4950 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 9600 4950 50  0001 C CNN
+F 4 "CRCW08050000Z0EA" H 9600 4950 50  0001 C CNN "MPN"
+F 5 "1469846" H 9600 4950 50  0001 C CNN "ON_FARNELL"
+	1    9600 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F6BBBCA
+P 9600 5150
+AR Path="/5E8C8987/5F6BBBCA" Ref="C?"  Part="1" 
+AR Path="/5E8C857B/5F6BBBCA" Ref="C29"  Part="1" 
+AR Path="/5E8C85D5/5F6BBBCA" Ref="C?"  Part="1" 
+F 0 "C29" H 9715 5196 50  0000 L CNN
+F 1 "100n" H 9715 5105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9638 5000 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0805C104K5RACTU.pdf" H 9600 5150 50  0001 C CNN
+F 4 "C0805C104K5RACTU" H 9600 5150 50  0001 C CNN "MPN"
+F 5 "1414664" H 9600 5150 50  0001 C CNN "ON_FARNELL"
+F 6 "" H 9600 5150 50  0001 C CNN "LCSC_PART_NO"
+	1    9600 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F6BBBD7
+P 9300 5700
+AR Path="/5E8C85D5/5F6BBBD7" Ref="#PWR?"  Part="1" 
+AR Path="/5E8C857B/5F6BBBD7" Ref="#PWR034"  Part="1" 
+F 0 "#PWR034" H 9300 5450 50  0001 C CNN
+F 1 "GND" H 9305 5527 50  0000 C CNN
+F 2 "" H 9300 5700 50  0001 C CNN
+F 3 "" H 9300 5700 50  0001 C CNN
+	1    9300 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5F6BBBDD
+P 9850 5750
+AR Path="/5E8C85D5/5F6BBBDD" Ref="#PWR?"  Part="1" 
+AR Path="/5E8C857B/5F6BBBDD" Ref="#PWR035"  Part="1" 
+F 0 "#PWR035" H 9850 5550 50  0001 C CNN
+F 1 "GNDPWR" H 9854 5596 50  0000 C CNN
+F 2 "" H 9850 5700 50  0001 C CNN
+F 3 "" H 9850 5700 50  0001 C CNN
+	1    9850 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 4950 9450 4950
+Wire Wire Line
+	9450 5150 9300 5150
+Connection ~ 9300 5150
+Wire Wire Line
+	9300 5150 9300 4950
+Wire Wire Line
+	9750 5150 9850 5150
+Wire Wire Line
+	9750 4950 9850 4950
+Wire Wire Line
+	9850 4950 9850 5150
+Connection ~ 9850 5150
+Text Notes 9200 5650 1    50   ~ 0
+Populate according \nto EMC needs!
+Text Notes 9350 5250 0    50   ~ 0
+N.P.
+Connection ~ 5000 4400
+Wire Wire Line
+	5000 4300 5000 4400
+Wire Wire Line
+	5150 4300 5000 4300
+Connection ~ 5000 4500
+Wire Wire Line
+	5000 4400 5000 4500
+Wire Wire Line
+	5150 4400 5000 4400
+Connection ~ 5000 4600
+Wire Wire Line
+	5000 4500 5000 4600
+Wire Wire Line
+	5150 4500 5000 4500
+Wire Wire Line
+	5000 4600 5000 4700
+Wire Wire Line
+	5150 4600 5000 4600
+$Comp
+L power:GND #PWR030
+U 1 1 5EC3D533
+P 5000 4700
+F 0 "#PWR030" H 5000 4450 50  0001 C CNN
+F 1 "GND" H 5005 4527 50  0000 C CNN
+F 2 "" H 5000 4700 50  0001 C CNN
+F 3 "" H 5000 4700 50  0001 C CNN
+	1    5000 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4300 6150 4300
+Connection ~ 7050 4300
+Wire Wire Line
+	7050 6050 7050 4300
+Wire Wire Line
+	6950 4200 7950 4200
+Connection ~ 6950 4200
+Wire Wire Line
+	6150 4200 6950 4200
+Wire Wire Line
+	6950 5950 6950 4200
+Wire Wire Line
+	6500 4000 6150 4000
+Connection ~ 6500 4000
+Wire Wire Line
+	6500 5100 6500 4000
+Wire Wire Line
+	4550 5100 6500 5100
+Wire Wire Line
+	4550 6300 4550 5100
+Wire Wire Line
+	4150 6300 4550 6300
+Wire Wire Line
+	3950 5900 3950 6000
+$Comp
+L power:+5V #PWR036
+U 1 1 5EC29A36
+P 3950 5900
+F 0 "#PWR036" H 3950 5750 50  0001 C CNN
+F 1 "+5V" H 3965 6073 50  0000 C CNN
+F 2 "" H 3950 5900 50  0001 C CNN
+F 3 "" H 3950 5900 50  0001 C CNN
+	1    3950 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q2
+U 1 1 5EC25979
+P 3950 6200
+F 0 "Q2" V 4199 6200 50  0000 C CNN
+F 1 "DMG1012T" V 4290 6200 50  0000 C CNN
+F 2 "SOT-532:SOT-532" H 4150 6300 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2040092.pdf" H 3950 6200 50  0001 C CNN
+F 4 "DMG1012T-7" H 3950 6200 50  0001 C CNN "MPN"
+F 5 "2543524" H 3950 6200 50  0001 C CNN "ON_FARNELL"
+	1    3950 6200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3950 5200 3950 5400
+$Comp
+L power:GND #PWR031
+U 1 1 5EC2372E
+P 3950 5450
+F 0 "#PWR031" H 3950 5200 50  0001 C CNN
+F 1 "GND" H 3955 5277 50  0000 C CNN
+F 2 "" H 3950 5450 50  0001 C CNN
+F 3 "" H 3950 5450 50  0001 C CNN
+	1    3950 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4600 6150 4600
+Connection ~ 6400 4600
+Wire Wire Line
+	6400 5000 6400 4600
+Wire Wire Line
+	4250 5000 4400 5000
+Wire Wire Line
+	3950 4700 3950 4800
+Connection ~ 3950 4700
+Wire Wire Line
+	3950 4600 3950 4700
+Wire Wire Line
+	3950 4150 3950 4300
+$Comp
+L power:+1V8 #PWR029
+U 1 1 5EC18EE5
+P 3950 4150
+F 0 "#PWR029" H 3950 4000 50  0001 C CNN
+F 1 "+1V8" H 3965 4323 50  0000 C CNN
+F 2 "" H 3950 4150 50  0001 C CNN
+F 3 "" H 3950 4150 50  0001 C CNN
+	1    3950 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EC177C4
+P 3950 4450
+AR Path="/5E8C8845/5EC177C4" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5EC177C4" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5EC177C4" Ref="R?"  Part="1" 
+AR Path="/5E8C857B/5EC177C4" Ref="R16"  Part="1" 
+F 0 "R16" H 4020 4496 50  0000 L CNN
+F 1 "100K" H 4020 4405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3880 4450 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 3950 4450 50  0001 C CNN
+F 4 "CRCW0603100KFKEA" H 3950 4450 50  0001 C CNN "MPN"
+F 5 "1469649" H 3950 4450 50  0001 C CNN "ON_FARNELL"
+	1    3950 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q1
+U 1 1 5EC04989
+P 4050 5000
+F 0 "Q1" H 4255 5046 50  0000 L CNN
+F 1 "DMG1012T" H 4255 4955 50  0000 L CNN
+F 2 "SOT-532:SOT-532" H 4250 5100 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2040092.pdf" H 4050 5000 50  0001 C CNN
+F 4 "DMG1012T-7" H 4050 5000 50  0001 C CNN "MPN"
+F 5 "2543524" H 4050 5000 50  0001 C CNN "ON_FARNELL"
+	1    4050 5000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 2050 8350 2150
+Wire Wire Line
+	8350 1600 8350 1750
+$Comp
+L power:+5V #PWR028
+U 1 1 5EC0136E
+P 8350 1600
+F 0 "#PWR028" H 8350 1450 50  0001 C CNN
+F 1 "+5V" H 8365 1773 50  0000 C CNN
+F 2 "" H 8350 1600 50  0001 C CNN
+F 3 "" H 8350 1600 50  0001 C CNN
+	1    8350 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L FB?
+U 1 1 5EC009BC
+P 8350 1900
+AR Path="/5E8C8845/5EC009BC" Ref="FB?"  Part="1" 
+AR Path="/5F37F386/5EC009BC" Ref="FB?"  Part="1" 
+AR Path="/5F38055E/5EC009BC" Ref="FB?"  Part="1" 
+AR Path="/5E8C857B/5EC009BC" Ref="FB1"  Part="1" 
+F 0 "FB1" V 8169 1900 50  0000 C CNN
+F 1 "2.0A" V 8260 1900 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8350 1900 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1740433.pdf" H 8350 1900 50  0001 C CNN
+F 4 "BLM18PG121SN1D" V 8350 1900 50  0001 C CNN "MPN"
+F 5 "1515738" H 8350 1900 50  0001 C CNN "ON_FARNELL"
+	1    8350 1900
+	1    0    0    -1  
+$EndComp
+Connection ~ 8350 2600
+Wire Wire Line
+	8350 2450 8350 2600
+$Comp
+L Device:Fuse F?
+U 1 1 5EBFDED2
+P 8350 2300
+AR Path="/5E8C89DB/5EBFDED2" Ref="F?"  Part="1" 
+AR Path="/5E8C8BAF/5EBFDED2" Ref="F?"  Part="1" 
+AR Path="/5E8C85D5/5EBFDED2" Ref="F?"  Part="1" 
+AR Path="/5E8C857B/5EBFDED2" Ref="F1"  Part="1" 
+F 0 "F1" V 8250 2300 50  0000 C CNN
+F 1 "500mA" V 8450 2300 50  0000 C CNN
+F 2 "Fuse:Fuse_1206_3216Metric" V 8280 2300 50  0001 C CNN
+F 3 "http://www.littelfuse.com/data/en/Data_Sheets/Littelfuse_PTC_1206L.pdf" H 8350 2300 50  0001 C CNN
+F 4 "1206L050YR" V 8350 2300 50  0001 C CNN "MPN"
+F 5 "1596993" H 8350 2300 50  0001 C CNN "ON_FARNELL"
+	1    8350 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 2600 8350 2800
+Wire Wire Line
+	6150 2600 8350 2600
+$Comp
+L ESD8040:ESD8040 IC1
+U 1 1 5EBFA129
+P 5250 2500
+F 0 "IC1" H 5650 2665 50  0000 C CNN
+F 1 "ESD8040" H 5650 2574 50  0000 C CNN
+F 2 "ESD8040:ESD8040" H 5250 150 50  0001 L CNN
+F 3 "http://www.farnell.com/datasheets/2355017.pdf" H 5250 2500 50  0001 C CNN
+F 4 "ESD8040MUTAG" H 5250 2500 50  0001 C CNN "MPN"
+F 5 "2533264" H 5250 2500 50  0001 C CNN "ON_FARNELL"
+	1    5250 2500
+	1    0    0    -1  
+$EndComp
+Text Notes 3500 1200 0    50   ~ 0
+Route each N/P pair as differential line with a differential impedance of 100R!
+Wire Wire Line
+	3950 4700 3350 4700
+Wire Wire Line
+	3350 6300 3750 6300
+Wire Wire Line
+	7150 3100 6150 3100
+Connection ~ 7150 3100
+Wire Wire Line
+	7150 2000 7150 3100
+Wire Wire Line
+	3350 2000 7150 2000
+Wire Wire Line
+	6150 3200 7250 3200
+Wire Wire Line
+	7250 3200 7950 3200
+Connection ~ 7250 3200
+Wire Wire Line
+	7250 1900 7250 3200
+Wire Wire Line
+	3350 1900 7250 1900
+Wire Wire Line
+	7350 3300 6150 3300
+Connection ~ 7350 3300
+Wire Wire Line
+	7350 1800 7350 3300
+Wire Wire Line
+	3350 1800 7350 1800
+Wire Wire Line
+	7450 3400 7950 3400
+Connection ~ 7450 3400
+Wire Wire Line
+	7450 1700 7450 3400
+Wire Wire Line
+	3350 1700 7450 1700
+Wire Wire Line
+	7550 3500 6150 3500
+Connection ~ 7550 3500
+Wire Wire Line
+	7550 1600 7550 3500
+Wire Wire Line
+	3350 1600 7550 1600
+Wire Wire Line
+	7650 3600 7950 3600
+Connection ~ 7650 3600
+Wire Wire Line
+	7650 1500 7650 3600
+Wire Wire Line
+	3350 1500 7650 1500
+Wire Wire Line
+	7750 3700 6150 3700
+Connection ~ 7750 3700
+Wire Wire Line
+	7750 1400 7750 3700
+Wire Wire Line
+	3350 1400 7750 1400
+Wire Wire Line
+	7850 3800 7950 3800
+Connection ~ 7850 3800
+Wire Wire Line
+	7850 1300 7850 3800
+Wire Wire Line
+	3350 1300 7850 1300
+Connection ~ 8450 5100
+Wire Wire Line
+	8650 5100 8650 5000
+Wire Wire Line
+	8450 5100 8650 5100
+Connection ~ 8350 5100
+Wire Wire Line
+	8450 5100 8450 5000
+Wire Wire Line
+	8350 5100 8450 5100
+Connection ~ 8250 5100
+Wire Wire Line
+	8350 5100 8350 5000
+Wire Wire Line
+	8250 5100 8350 5100
+Wire Wire Line
+	8150 5100 8150 5000
+Connection ~ 8150 5100
+Wire Wire Line
+	8250 5100 8250 5000
+Wire Wire Line
+	8150 5100 8250 5100
+Wire Wire Line
+	8150 5700 8150 5100
+$Comp
+L power:GNDPWR #PWR032
+U 1 1 5EED4466
+P 8150 5700
+F 0 "#PWR032" H 8150 5500 50  0001 C CNN
+F 1 "GNDPWR" H 8154 5546 50  0000 C CNN
+F 2 "" H 8150 5650 50  0001 C CNN
+F 3 "" H 8150 5650 50  0001 C CNN
+	1    8150 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR033
+U 1 1 5EED32DB
+P 8550 5700
+F 0 "#PWR033" H 8550 5450 50  0001 C CNN
+F 1 "GND" H 8555 5527 50  0000 C CNN
+F 2 "" H 8550 5700 50  0001 C CNN
+F 3 "" H 8550 5700 50  0001 C CNN
+	1    8550 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 4600 6400 4600
+Wire Wire Line
+	6150 4500 7950 4500
+Wire Wire Line
+	7950 4300 7050 4300
+Wire Wire Line
+	7950 4000 6500 4000
+Wire Wire Line
+	6150 3800 7850 3800
+Wire Wire Line
+	7950 3700 7750 3700
+Wire Wire Line
+	6150 3600 7650 3600
+Wire Wire Line
+	7950 3500 7550 3500
+Wire Wire Line
+	6150 3400 7450 3400
+Wire Wire Line
+	7950 3300 7350 3300
+Wire Wire Line
+	7950 3100 7150 3100
+$Comp
+L Connector:HDMI_A J3
+U 1 1 5EECA8D5
+P 8350 3900
+F 0 "J3" H 8780 3946 50  0000 L CNN
+F 1 "Conn_HDMI_A" H 8780 3855 50  0000 L CNN
+F 2 "47151-1051:47151-1051" H 8375 3900 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2696868.pdf" H 8375 3900 50  0001 C CNN
+F 4 "47151-1051 " H 8350 3900 50  0001 C CNN "MPN"
+F 5 "2614936" H 8350 3900 50  0001 C CNN "ON_FARNELL"
+	1    8350 3900
+	1    0    0    -1  
+$EndComp
+Text HLabel 5450 6050 0    50   BiDi ~ 0
+HDMI_SDA
+Text HLabel 5450 5950 0    50   BiDi ~ 0
+HDMI_SCL
+Text HLabel 3350 4700 0    50   BiDi ~ 0
+HDMI_HPD_N_1V8
+Text HLabel 3350 2000 0    50   BiDi ~ 0
+HDMI_D2_P
+Text HLabel 3350 1900 0    50   BiDi ~ 0
+HDMI_D2_N
+Text HLabel 3350 1800 0    50   BiDi ~ 0
+HDMI_D1_P
+Text HLabel 3350 1700 0    50   BiDi ~ 0
+HDMI_D1_N
+Text HLabel 3350 1600 0    50   BiDi ~ 0
+HDMI_D0_P
+Text HLabel 3350 1500 0    50   BiDi ~ 0
+HDMI_D0_N
+Text HLabel 3350 1400 0    50   BiDi ~ 0
+HDMI_CLK_P
+Text HLabel 3350 1300 0    50   BiDi ~ 0
+HDMI_CLK_N
+Text HLabel 3350 6300 0    50   BiDi ~ 0
+HDMI_CEC
+Wire Wire Line
+	8550 5000 8550 5700
+Wire Wire Line
+	5450 6050 7050 6050
+Wire Wire Line
+	6950 5950 5450 5950
+Wire Wire Line
+	9850 5150 9850 5750
+Wire Wire Line
+	9300 5150 9300 5700
+$Comp
+L Graphic:Logo_Open_Hardware_Small #LOGO?
+U 1 1 5F5FE37A
+P 10900 6900
+AR Path="/5F5FE37A" Ref="#LOGO?"  Part="1" 
+AR Path="/5E8C857B/5F5FE37A" Ref="#LOGO4"  Part="1" 
+F 0 "#LOGO4" H 10900 7175 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 10900 6675 50  0001 C CNN
+F 2 "" H 10900 6900 50  0001 C CNN
+F 3 "~" H 10900 6900 50  0001 C CNN
+	1    10900 6900
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	2400 3800 2400 7050
+Wire Notes Line
+	2400 7050 4800 7050
+Wire Notes Line
+	4800 7050 4800 3800
+Wire Notes Line
+	4800 3800 2400 3800
+Text Notes 2400 7250 0    50   ~ 0
+Transistorized Level-Shifter as recommended in\nhttps://www.raspberrypi.org/documentation/hardware/computemodule/schematics/rpi_SCH_CMIO_3p0.pdf
+$Comp
+L Device:R R?
+U 1 1 5F9B3E66
+P 4400 5200
+AR Path="/5E8C8845/5F9B3E66" Ref="R?"  Part="1" 
+AR Path="/5F37F386/5F9B3E66" Ref="R?"  Part="1" 
+AR Path="/5F38055E/5F9B3E66" Ref="R?"  Part="1" 
+AR Path="/5E8C857B/5F9B3E66" Ref="R15"  Part="1" 
+F 0 "R15" H 4470 5246 50  0000 L CNN
+F 1 "100K" H 4470 5155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4330 5200 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20035/dcrcwe3.pdf" H 4400 5200 50  0001 C CNN
+F 4 "CRCW0603100KFKEA" H 4400 5200 50  0001 C CNN "MPN"
+F 5 "1469649" H 4400 5200 50  0001 C CNN "ON_FARNELL"
+	1    4400 5200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4400 5050 4400 5000
+Connection ~ 4400 5000
+Wire Wire Line
+	4400 5000 6400 5000
+Wire Wire Line
+	4400 5350 4400 5400
+Wire Wire Line
+	4400 5400 3950 5400
+Connection ~ 3950 5400
+Wire Wire Line
+	3950 5400 3950 5450
+$EndSCHEMATC
