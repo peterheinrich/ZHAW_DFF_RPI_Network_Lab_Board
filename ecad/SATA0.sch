@@ -2033,5 +2033,5 @@ F 3 "" H 1000 7050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 5650 6350 0    50   ~ 0
-This schematic follows roughly the reccommendations \ngiven in the TUSB9262 Implementation Guide\nhttps://www.ti.com/lit/pdf/slla315
+This schematic follows roughly the reccommendations \ngiven in the TUSB9261 Implementation Guide\nhttps://www.ti.com/lit/pdf/slla315
 $EndSCHEMATC

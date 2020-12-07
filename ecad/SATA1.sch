@@ -2085,5 +2085,5 @@ Wire Wire Line
 Wire Wire Line
 	8750 1500 9100 1500
 Text Notes 5650 6350 0    50   ~ 0
-This schematic follows roughly the reccommendations \ngiven in the TUSB9262 Implementation Guide\nhttps://www.ti.com/lit/pdf/slla315
+This schematic follows roughly the reccommendations \ngiven in the TUSB9261 Implementation Guide\nhttps://www.ti.com/lit/pdf/slla315
 $EndSCHEMATC
