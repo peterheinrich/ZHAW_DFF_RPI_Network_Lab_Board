@@ -30,7 +30,7 @@ The purpose of these boards is to provide a self-contained lab environment rathe
 speed is not of primary concern, such a system (or systems) could still make a valuable contribution. 
 
 ## Fully Open Source / Open Hardware
-Everything in this repository is Copyright 2020, Peter Heinrich, ZHAW but is licensed under permissive open source / open hardware licenses.
+Everything in this repository is licensed under permissive open source / open hardware licenses.
 * License for hardware design documentes (SEE LICENSE_Hardware file): <strong>CERN Open Hardware Licence Version 2 - Permissive</strong>
 * License for firmware (SEE LICENSE_Software file): <strong>2-Clause BSD License</strong> 
 
