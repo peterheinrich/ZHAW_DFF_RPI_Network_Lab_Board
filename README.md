@@ -35,7 +35,7 @@ Everything in this repository is licensed under permissive open source / open ha
 * License for firmware (SEE LICENSE_Software file): <strong>2-Clause BSD License</strong> 
 
 # Prototype REV-B
-SUCCESSS! The REV-B prototype is fully operational. Network, display with touch, SATA and all the USB ports are working properly.
+SUCCESS! The REV-B prototype is fully operational. Network, display with touch, SATA and all the USB ports are working properly.
 ![alt text](https://github.com/peterheinrich/ZHAW_DFF_RPI_Network_Lab_Board/blob/master/doc/REV-B-4DPI_HAT.jpeg "Final System With HAT")
 ![alt text](https://github.com/peterheinrich/ZHAW_DFF_RPI_Network_Lab_Board/blob/master/doc/REV-B-TOP.jpeg "TOP")
 ![alt text](https://github.com/peterheinrich/ZHAW_DFF_RPI_Network_Lab_Board/blob/master/doc/REV-B-BOTTOM.jpeg "BOTTOM")
